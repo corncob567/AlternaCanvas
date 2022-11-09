@@ -1,3 +1,7 @@
+# AlternaCanvas
+Project 2 for CS6067\
+Team: Baru's Kids
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
