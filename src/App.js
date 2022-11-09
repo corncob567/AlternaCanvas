@@ -1,17 +1,22 @@
-import Navigation from './components/navigation/navbar.js';
+import './App.css';
 import { Outlet } from 'react-router-dom';
-import { Row } from '@carbon/react';
+import NavBar from './components/navigation/navbar.js';
+import ChatColumn from './components/chat/chatcolumn.js';
+
 
 const App = () => {
     return (
         <div className='App'>
-            <div className='grid-container'>
-                <Row>
-                    <Navigation/>
-                </Row>
+            <div className='navBarColumn'>
+              <NavBar/>
             </div>
-        <Outlet/>
-        </div>  
+            <div className='pageOutletWrapper'>
+              <Outlet/>
+            </div>
+            <div className='chatColumn'>
+              <ChatColumn/>
+            </div>
+        </div>
     );
 } 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Syllabus from './components/pages/Syllabus';
+import Syllabus from './components/pages/syllabus/Syllabus';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

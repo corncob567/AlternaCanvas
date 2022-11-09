@@ -2,11 +2,11 @@ import React from 'react';
 import './navigation.css';
 import { NavLink } from 'react-router-dom';
 
-const Navigation = () => {
+const NavBar = () => {
     return (
         <div className='navigation'>
             <div className='navigation--col'>
-                <ul className='navigation--items no-bullets'>
+                <ul className='navigation--items'>
                     <li> 
                         <NavLink to='/syllabus' className={e => (e.isActive ? 'navigation--item active' : 'navigation--item')}>Syllabus</NavLink>
                     </li>
@@ -16,4 +16,4 @@ const Navigation = () => {
     );
 }
 
-export default Navigation;
+export default NavBar;
