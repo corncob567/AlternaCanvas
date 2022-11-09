@@ -1,8 +1,11 @@
 import React from 'react';
+import './syllabus.scss';
 
 const Syllabus = () => {
     return (
-        <h1>Syllabus</h1>
+        <div className='syllabus'>
+            <h1>Syllabus</h1>
+        </div>
     );
 };
 

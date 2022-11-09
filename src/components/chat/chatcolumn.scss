@@ -1,0 +1,26 @@
+.chat-column{
+    background-color: #f1f1f1;
+    h1{
+        margin: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    }
+    
+    li{
+        &.sent{
+            text-align: right;
+        }
+        &.received{
+            text-align: left;
+        }
+        padding: 10px;
+        font-size: 20px;
+    }
+}
