@@ -1,6 +1,6 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import NavBar from './components/navigation/navbar.js';
+import NavBar from './components/navigation/CourseNav.js';
 import ChatColumn from './components/chat/chatcolumn.js';
 
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import './navigation.scss';
+import '../../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 
-const NavBar = () => {
+const CourseNav = () => {
     return (
         <div className='navigation'>
             <div className='navigation--col'>
@@ -28,4 +28,4 @@ const NavBar = () => {
     );
 }
 
-export default NavBar;
+export default CourseNav;

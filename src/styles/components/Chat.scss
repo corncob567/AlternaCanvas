@@ -1,3 +1,15 @@
+.chat-header {
+    max-height: 75px;
+    border: solid grey 3px;
+    padding: 10px;
+
+}
+
+.chat-body {
+    overflow-y: auto;
+    height: 300px;
+}
+
 .chat-column{
     background-color: #f1f1f1;
     h1{

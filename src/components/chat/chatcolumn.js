@@ -1,5 +1,5 @@
 import React from 'react';
-import './chatcolumn.scss';
+import '../../styles/main.scss';
 
 const ChatColumn = () => {
     return (
