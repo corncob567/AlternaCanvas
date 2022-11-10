@@ -1,5 +1,6 @@
-import Image from 'react-bootstrap/Image'
+import React from 'react';
 
+import Image from 'react-bootstrap/Image'
 
 function ProfilePicture(props) {
     return (

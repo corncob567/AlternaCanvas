@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '../../styles/chat.css'
 import ChatMessage from './ChatMessage';
 
