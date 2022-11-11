@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import React from 'react';
 import CourseNav from './components/navigation/CourseNav';
 import CourseSelector from './components/navigation/CourseSelector';
-import ChatWindow from './components/ChatWindow'
+import ChatWindow from './components/chat/ChatWindow'
 
 const App = () => {
     return (
