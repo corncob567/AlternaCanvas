@@ -1,11 +1,11 @@
 .courseNav{
-    border-right: 5px black solid;
-    border-left: 5px black solid;
+    border-right: 5px $primary-3 solid;
+    border-left: 5px $primary-3 solid;
+    background-color: $secondary-2;
 
     ul {
         margin: 0;
         padding: 0;
-        background-color: #f1f1f1;
         height: 100vh;
         overflow: auto; /* Enable scrolling if the sidenav has too much content */
     }

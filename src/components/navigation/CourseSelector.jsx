@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import '../../styles/main.scss';
+import { Link } from 'react-router-dom';
+
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
+import courseImage1 from '/Users/lizard_tremblay/Repos2/AlternaCanvas/src/assets/UIUX-designing-1.jpeg';
 
-const CourseSelector = () => {
+function CourseSelector(props) {
 
     const [activeCourse, setActiveCourse] = useState('default');
     
@@ -21,14 +24,10 @@ const CourseSelector = () => {
         <div className='courseSelector'>
             <BaruvasLogo/>
             <div className='courseSelector--courses'>
-                <Course/>
-                <Course/>
-                <Course/>
-                <Course/>
-                <Course/>
-                <Course/>
-                <Course/>
-                <Course/>
+                <Course courseId='ui' courseName='User Interface Design' courseProfessor='Dr. Aurisano' courseImg={courseImage1}/>
+                <Link to='/compg/syllabus'>
+                    <Course courseId='compg' courseName='Computer Graphics' courseProfessor='Dr. Bingus' courseImg={courseImage1}/>
+                </Link>
                 <AddCourse/>
             </div>
         </div>

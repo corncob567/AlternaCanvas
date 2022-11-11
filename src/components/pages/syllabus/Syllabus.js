@@ -13,9 +13,9 @@ function CourseSyllabus(props){
         
                     <p>Location: Baldwin 661</p>
          
-                    <p>Instructor: Dr. Jillian Aurisano</p>
+                    <p>Instructor: Dr. Jerry Bingus</p>
         
-                    <p>Email: jillian.aurisano@uc.edu</p>
+                    <p>Email: jerry.bingus@uc.edu</p>
         
                     <p>Office: 812b Rhodes</p>
         
