@@ -3,7 +3,9 @@ import '../../../styles/main.scss';
 
 const Assignments = () => {
     return (
-        <h1>Assignments</h1>
+        <div className='pageWrapper'>
+            <h1 className='pageTitle'>Assignments</h1>
+        </div>
     );
 };
 

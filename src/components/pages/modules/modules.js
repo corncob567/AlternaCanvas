@@ -3,7 +3,9 @@ import '../../../styles/main.scss';
 
 const Modules = () => {
     return (
-        <h1>Modules</h1>
+        <div className='pageWrapper'>
+            <h1 className='pageTitle'>Modules</h1>
+        </div>
     );
 };
 

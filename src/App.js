@@ -1,10 +1,9 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import React, { Component }  from 'react';
+import React from 'react';
 import CourseNav from './components/navigation/CourseNav';
 import CourseSelector from './components/navigation/CourseSelector';
 import ChatWindow from './components/ChatWindow'
-
 
 const App = () => {
     return (
