@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../styles/chat.css'
+import '../../styles/main.scss'
 
 function ChatMessage(props){
     return (

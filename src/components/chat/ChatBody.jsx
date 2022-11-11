@@ -1,6 +1,5 @@
 import React from 'react';
-
-import '../../styles/chat.css'
+import '../../styles/main.scss'
 import ChatMessage from './ChatMessage';
 
 function ChatBody(props) {

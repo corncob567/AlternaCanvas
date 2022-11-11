@@ -1,5 +1,6 @@
 import React from 'react';
-import './syllabus.css';
+import '../../../styles/main.scss';
+
 
 function CourseSyllabus(props){
     const selectedCourseId = props.courseId

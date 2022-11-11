@@ -1,17 +1,19 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import NavBar from './components/navigation/navbar.js';
 import React, { Component }  from 'react';
+import CourseNav from './components/navigation/CourseNav';
+import CourseSelector from './components/navigation/CourseSelector';
 import ChatWindow from './components/ChatWindow'
-
-
 
 
 const App = () => {
     return (
         <div className='App'>
-            <div className='navBarColumn'>
-              <NavBar/>
+            <div className='courseSelector--container'>
+              <CourseSelector/>
+            </div>
+            <div className='courseNav--container'>
+              <CourseNav/>
             </div>
             <div className='pageOutletWrapper'>
               <Outlet/>
