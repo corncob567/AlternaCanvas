@@ -2,11 +2,6 @@
   display: flex;
 }
 
-.navBarColumn{
-  width: 15%;
-  height: 100%;
-}
-
 .pageOutletWrapper{
   display: flex;
   justify-content: center;
