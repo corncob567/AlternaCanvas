@@ -8,7 +8,7 @@ import Modules from './components/pages/modules/modules';
 import Announcements from './components/pages/announcements/announcements';
 import Grades from './components/pages/grades/grades';
 
-// import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
