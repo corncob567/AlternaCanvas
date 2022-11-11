@@ -9,7 +9,6 @@ import Announcements from './components/pages/announcements/announcements';
 import Grades from './components/pages/grades/grades';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import CourseNav from './components/navigation/CourseNav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
