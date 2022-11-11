@@ -1,4 +1,8 @@
 @import 'variables.scss';
-@import 'components/CourseNav.scss';
+@import 'components/Courses.scss';
 @import 'components/Syllabus.scss';
 @import 'components/Chat.scss';
+
+.baruvasLogo {
+    margin: 24px 24px -12px 24px;
+}

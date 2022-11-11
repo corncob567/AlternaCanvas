@@ -1,0 +1,40 @@
+.courseNav{
+    border-right: 5px black solid;
+    border-left: 5px black solid;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        height: 100vh;
+        overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    }
+    
+    a {
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        color: inherit;
+    }
+}
+
+.course {
+    width: 85px;
+    height: 85px;
+    margin: 24px;
+    background-color: $secondary-2;
+}
+
+.addCourse {
+    margin: 0px 24px;
+}
+
+.courseSelector {
+
+    .courseSelector--courses {
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 85vh;
+    }
+}
