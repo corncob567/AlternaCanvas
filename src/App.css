@@ -1,0 +1,15 @@
+.App{
+  display: flex;
+}
+
+.pageOutletWrapper{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+
+.chatColumn{
+  width: 25%;
+  height: 100%;
+}

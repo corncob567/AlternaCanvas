@@ -3,7 +3,9 @@ import '../../../styles/main.scss';
 
 const Grades = () => {
     return (
-        <h1>Grades</h1>
+        <div className='pageWrapper'>
+            <h1 className='pageTitle'>Grades</h1>
+        </div>
     );
 };
 
