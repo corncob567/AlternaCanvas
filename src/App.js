@@ -1,8 +1,9 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
+import React, { Component }  from 'react';
 import CourseNav from './components/navigation/CourseNav';
 import CourseSelector from './components/navigation/CourseSelector';
-import ChatColumn from './components/chat/chatcolumn.js';
+import ChatWindow from './components/ChatWindow'
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
               <Outlet/>
             </div>
             <div className='chatColumn'>
-              <ChatColumn/>
+              <ChatWindow/>
             </div>
         </div>
     );

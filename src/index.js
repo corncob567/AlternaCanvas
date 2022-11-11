@@ -8,17 +8,18 @@ import Modules from './components/pages/modules/modules';
 import Announcements from './components/pages/announcements/announcements';
 import Grades from './components/pages/grades/grades';
 
+// import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
         <Route path="/" element={<App />} >
-            <Route path="syllabus" element={<Syllabus/>}/>
-            <Route path="assignments" element={<Assignments/>}/>
-            <Route path="modules" element={<Modules/>}/>
-            <Route path="announcements" element={<Announcements/>}/>
-            <Route path="grades" element={<Grades/>}/>
+            <Route path="syllabus" element={<Syllabus courseId={'seniordesign'}/>}/>
+            <Route path="assignments" element={<Assignments courseId={'compg'}/>}/>
+            <Route path="modules" element={<Modules courseId={'compg'}/>}/>
+            <Route path="announcements" element={<Announcements courseId={'compg'}/>}/>
+            <Route path="grades" element={<Grades courseId={'compg'}/>}/>
         </Route>
     </Routes>
   </BrowserRouter>
