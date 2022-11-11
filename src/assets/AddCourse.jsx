@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddCourse = () => {
+function AddCourse() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" className='addCourse' width="87" height="87" viewBox="0 0 87 87">
       <g id="AddCourse" data-name="AddCourse" transform="translate(-21 -962)">

@@ -2,15 +2,17 @@ import React from 'react';
 import '../../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 
-const CourseNav = ({ courseID, courseName, courseImg, courseProfessor }) => {
+function CourseNav({courseID, courseName, courseImg, courseProfessor}) {
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
-                <img></img>
+                <img src={courseImg} alt={courseName}/>
+                <h3>{courseName}</h3>
+                <p>{courseProfessor}</p>
             </div> 
             <ul className='courseNav--pages'>
                 <li> 
-                    <NavLink to='/syllabus' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Syllabus</NavLink>
+                    <NavLink to={`${courseID}/syllabus`} className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Syllabus</NavLink>
                 </li>
                 <li>
                     <NavLink to='/assignments' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Assignments</NavLink>

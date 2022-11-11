@@ -1,13 +1,14 @@
-import ChatHeader from "./chat/ChatHeader"
-import ChatInput from "./chat/ChatInput"
-import ChatBody from './chat/ChatBody'
+import ChatHeader from "./ChatHeader"
+import ChatInput from "./ChatInput"
+import ChatBody from './ChatBody'
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import React, { useState } from "react";
 
-function ChatWindow(props){
-    const [messages, addMessages] = useState([{"content":"test1", "author": "false"}, {"content":"test2", "author": "true"}])
+function ChatWindow(props) {
+    const [messages, addMessages] = useState([{"content":"test1", "author": "false"}, {"content":"test2", "author": "true"}]);
+
     return (
         <Container fluid>
             <Row lg={1}>
@@ -20,9 +21,6 @@ function ChatWindow(props){
                 <ChatInput></ChatInput>
             </Row>
         </Container>
-
-
-
     )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BaruvasLogo = () => {
+function BaruvasLogo() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="80.122" height="92" viewBox="0 0 70.122 82" className='baruvasLogo'>
       <defs>
