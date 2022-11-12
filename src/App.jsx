@@ -7,21 +7,29 @@ import ChatWindow from './components/chat/ChatWindow'
 
 function App() {
 
-  const [activeCourse, setActiveCourse] = useState('default');
+  const [activeCourse, setActiveCourse] = useState('compg');
+
+  const [chatData, setChatData] = useState({
+    "liz": {"data": [{"content":"test1", "author": "false"}, {"content":"test2", "author": "true"}]},
+    "daniel": {"data": [{"content":"test3", "author": "false"}, {"content":"test4", "author": "true"}]},
+    "alex": {"data": [{"content":"test5", "author": "false"}, {"content":"test6", "author": "true"}]},
+  })
+
+  let [currChatName, setCurrChatName] = useState('liz');
 
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector/>
+            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse}/>
           </div>
           <div className='courseNav--container'>
-            <CourseNav/>
+            <CourseNav activeCourse={activeCourse} setActiveCourse={setActiveCourse} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName}/>
           </div>
           <div className='pageOutletWrapper'>
             <Outlet/>
           </div>
           <div className='chatColumn'>
-            <ChatWindow/>
+            <ChatWindow currChatData={chatData[currChatName]} currChatName={currChatName} setChatData={setChatData}/>
           </div>
       </div>
   );

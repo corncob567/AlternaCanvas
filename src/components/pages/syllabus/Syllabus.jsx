@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../styles/main.scss';
-
+import { AiFillPushpin } from 'react-icons/ai';
 
 function CourseSyllabus(props){
     const selectedCourseId = props.courseId
@@ -450,7 +450,7 @@ const Syllabus = (props) => {
     const courseId = props.courseId
     return (
         <div className='pageWrapper'>
-            <h1 className='pageTitle'>Syllabus</h1>
+            <h1 className='pageTitle'>Syllabus <AiFillPushpin style={{verticalAlign: 'none'}}/></h1>
             <CourseSyllabus courseId={courseId}/>
         </div>
     );
