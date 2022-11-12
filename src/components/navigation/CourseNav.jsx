@@ -2,12 +2,12 @@ import React from 'react';
 import '../../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 
-function CourseNav({courseID, courseName, courseImg, courseProfessor}) {
+function CourseNav({ courseID, courseName, courseImg, courseProfessor }) {
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
-                <img src={courseImg} alt={courseName}/>
-                <h3>{courseName}</h3>
+                <img src={courseImg} alt={courseName} className="courseNav--img"/>
+                <h3 className='courseNav--courseTitle'>{courseName}</h3>
                 <p>{courseProfessor}</p>
             </div> 
             <ul className='courseNav--pages'>
