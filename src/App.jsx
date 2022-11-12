@@ -22,7 +22,7 @@ function App() {
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)}/>
+            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName}/>
           </div>
           <div className='pageOutletWrapper'>
             <Outlet/>
