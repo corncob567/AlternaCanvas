@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/main.scss';
 import { NavLink } from 'react-router-dom';
+import { propTypes } from 'react-bootstrap/esm/Image';
+import ChatSelect from './ChatSelect';
 
-function CourseNav({ courseID, courseName, courseImg, courseProfessor }) {
+function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, setCurrChatName}) {
+    function updateCurrChatName(chatName){
+        setCurrChatName(currChatName => currChatName = chatName)
+    }
+    function test(){
+        console.log('test')
+    }
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
@@ -26,6 +34,10 @@ function CourseNav({ courseID, courseName, courseImg, courseProfessor }) {
                 <li>
                     <NavLink to='grades' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Grades</NavLink>
                 </li>
+                <br></br>
+                {chats.map((chat) => {
+                    return <ChatSelect chatName={chat} click={() => updateCurrChatName(chat)}></ChatSelect>
+                })}
             </ul>
         </div>
     );
