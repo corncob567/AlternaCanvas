@@ -14,8 +14,8 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
-                <img src={courseImg} alt={courseName}/>
-                <h3>{courseName}</h3>
+                <img src={courseImg} alt={courseName} className="courseNav--img"/>
+                <h3 className='courseNav--courseTitle'>{courseName}</h3>
                 <p>{courseProfessor}</p>
             </div> 
             <ul className='courseNav--pages'>
