@@ -7,15 +7,15 @@ import ChatWindow from './components/chat/ChatWindow'
 
 function App() {
 
-  const [activeCourse, setActiveCourse] = useState('default');
+  const [activeCourse, setActiveCourse] = useState('compg');
 
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector/>
+            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse}/>
           </div>
           <div className='courseNav--container'>
-            <CourseNav/>
+            <CourseNav activeCourse={activeCourse} setActiveCourse={setActiveCourse}/>
           </div>
           <div className='pageOutletWrapper'>
             <Outlet/>
