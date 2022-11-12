@@ -1,0 +1,44 @@
+.moduleListWrapper{
+    margin-top: 20px;
+    .iconSpan{
+        svg{
+            font-size: 26px;
+        }
+    }
+
+    .accordion-item{
+        margin: 10px;
+    }
+
+    a{
+        color: $primary-1;
+    }
+
+    .accordion-button{
+        font-weight: 700;
+    }
+
+    .accordion-button:not(.collapsed)::after{
+        background-image: var(--bs-accordion-btn-icon);
+    }
+
+    .accordion-header{
+        border-radius: 0px;
+        border-color: $primary-1;
+        border-style: groove;
+    }
+    .accordion-button.collapsed{
+        background-color: $secondary-1;
+        color: $primary-3;
+    }
+
+    .accordion-button:not(.collapsed){
+        background-color: $secondary-2;
+        color: $primary-3;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+}
