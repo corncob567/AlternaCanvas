@@ -3,11 +3,14 @@
     border: solid grey 3px;
     padding: 10px;
 
+    img{
+        width: 40px;
+    }
 }
 
 .chat-body {
     overflow-y: auto;
-    height: 500px;
+    height: 80vh;
     width: 100%;
     margin: 0em;
 }
@@ -46,4 +49,5 @@
 
 .chat-message-author {
     text-align: right;
+    background-color: lightgrey;
 }
