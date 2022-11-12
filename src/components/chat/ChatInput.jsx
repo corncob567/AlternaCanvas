@@ -11,7 +11,15 @@ function ChatInput(props){
         onInput = ({target:{value}}) => setValue(value)
 
     function handleClick(){
-        props.addMessage(messages => [...messages, {'content': value, 'author': 'true'}])
+        props.addMessage(messages => {
+            // messages[props.currChatName].data = [...messages[props.currChatName].data, {'content': value, 'author': true}]
+            // return messages
+            let messagesCopy = JSON.parse(JSON.stringify(messages));
+            let currentMessages = messagesCopy[props.currChatName].data.slice();
+            currentMessages.push( {'content': value, 'author': 'true'});
+            messagesCopy[props.currChatName].data = currentMessages;
+            return messagesCopy;
+        })
         setValue(value => value = '');
     }
 
@@ -22,7 +30,7 @@ function ChatInput(props){
 
     return (
         <InputGroup>
-            <Form.Control aria-label="With textarea" onChange={onInput} value={value} onKeyDownCapture={handleKeyPress}/>   
+            <Form.Control aria-label="With textarea" onChange={onInput} value={value || ''} onKeyDownCapture={handleKeyPress}/>   
             <Button type='submit' variant="outline-secondary" onClick={handleClick}>Send</Button>
         </InputGroup>
     )
