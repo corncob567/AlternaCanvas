@@ -7,7 +7,9 @@
 
 .chat-body {
     overflow-y: auto;
-    height: 300px;
+    height: 500px;
+    width: 100%;
+    margin: 0em;
 }
 
 .chat-column{
@@ -41,4 +43,7 @@
     width: 25%;
     height: 100%;
 }
-  
+
+.chat-message-author {
+    text-align: right;
+}

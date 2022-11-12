@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../../styles/main.scss'
+import '../../styles/components/Chat.scss'
 
 function ChatMessage(props) {
     return (
         <div>
-            <p>{props.content}</p>
+            <p className={props.author === 'true' ? 'chat-message-author': ''}>{props.content}</p>
         </div>
     )
 }
