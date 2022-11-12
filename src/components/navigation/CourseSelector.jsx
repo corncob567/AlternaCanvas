@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
-import courseImage1 from '/Users/lizard_tremblay/Repos2/AlternaCanvas/src/assets/UIUX-designing-1.jpeg';
+import courseImage1 from '../../assets/UIUX-designing-1.jpeg';
 
 function CourseSelector(props) {
 

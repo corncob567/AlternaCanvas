@@ -7,18 +7,23 @@ import { useState } from 'react';
 
 function ChatInput(props){
 
-    const [value, setValue] = useState(0),
-        onInput = ({target:{value}}) => setValue(value),
-        onFormSubmit = e => {
-          e.preventDefault()
-          console.log(value)
-          setValue()
-        }
+    const [value, setValue] = useState(),
+        onInput = ({target:{value}}) => setValue(value)
+
+    function handleClick(){
+        props.addMessage(messages => [...messages, {'content': value, 'author': 'true'}])
+        setValue(value => value = '');
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            handleClick()
+    }};
 
     return (
         <InputGroup>
-            <Form.Control aria-label="With textarea" onChange={onInput} value={value}/>   
-            <Button variant="outline-secondary">Send</Button>
+            <Form.Control aria-label="With textarea" onChange={onInput} value={value} onKeyDownCapture={handleKeyPress}/>   
+            <Button type='submit' variant="outline-secondary" onClick={handleClick}>Send</Button>
         </InputGroup>
     )
 }
