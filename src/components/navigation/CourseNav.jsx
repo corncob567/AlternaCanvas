@@ -12,19 +12,19 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor}) {
             </div> 
             <ul className='courseNav--pages'>
                 <li> 
-                    <NavLink to={`${courseID}/syllabus`} className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Syllabus</NavLink>
+                    <NavLink to='syllabus' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Syllabus</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/assignments' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Assignments</NavLink>
+                    <NavLink to='assignments' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Assignments</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/modules' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Modules</NavLink>
+                    <NavLink to='modules' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Modules</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/announcements' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Announcements</NavLink>
+                    <NavLink to='announcements' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Announcements</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/grades' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Grades</NavLink>
+                    <NavLink to='grades' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Grades</NavLink>
                 </li>
             </ul>
         </div>
