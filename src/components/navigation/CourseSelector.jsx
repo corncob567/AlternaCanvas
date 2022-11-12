@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
-import courseImage1 from '../../assets/uiux.png';
 import CourseNav from './CourseNav';
 
 function CourseSelector(props) {
@@ -21,7 +20,7 @@ function CourseSelector(props) {
         )
     }
     
-    console.log(activeCourse)
+    console.log(props.chats)
 
     return (
         <>
@@ -55,6 +54,7 @@ function CourseSelector(props) {
                 courseName={courseInfo[`${activeCourse}`].courseName}
                 courseImg={`../../assets/${courseInfo[`${activeCourse}`].courseImg}`}
                 courseProfessor={courseInfo[`${activeCourse}`].courseProfessor}
+                chats={props.chats}
             />
         </div>
         </>
