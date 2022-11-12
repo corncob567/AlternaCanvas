@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Navigate replace to="/ui" />} />
+      <Route path="/" element={<Navigate replace to="/ui/syllabus" />} />
       <Route path="/compg" element={<App/>} >
         <Route exact path="syllabus" element={<Syllabus courseId={'compg'}/>}/>
         <Route path="assignments" element={<Assignments courseId={'compg'}/>}/>
