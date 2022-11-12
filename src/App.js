@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Outlet } from 'react-router-dom';
 import React from 'react';
 import CourseNav from './components/navigation/CourseNav';
