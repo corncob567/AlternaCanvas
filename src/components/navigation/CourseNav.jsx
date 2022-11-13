@@ -8,9 +8,7 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
     function updateCurrChatName(chatName){
         setCurrChatName(currChatName => currChatName = chatName)
     }
-    function test(){
-        console.log('test')
-    }
+
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
@@ -41,7 +39,7 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
                 </ul>
                 <ul className='courseNav--chats'>
                     {chats.map((chat) => {
-                        return <ChatSelect chatName={chat} onClick={() => updateCurrChatName(chat)}></ChatSelect>
+                        return <ChatSelect chatName={chat} click={() => updateCurrChatName(chat)}></ChatSelect>
                     })}
                 </ul>
             </div>
