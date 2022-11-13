@@ -25,6 +25,7 @@
 
     &--courseTitle {
         font-weight: 600;
+        margin: 0;
     }
 
     // &--item {
@@ -33,11 +34,26 @@
     //     }
     // }
 
+    &--courseProfessor {
+        margin: 0;
+    }
+
+    &--line {
+        margin: 0px 16px 12px 16px;
+    }
+
     ul {
         margin: 0;
         padding: 0;
-        height: 90vh;
+    }
+
+    &--tabs {
+        text-align: center;
+        height: 100vh;
         overflow: auto; /* Enable scrolling if the sidenav has too much content */
+        li {
+            padding: 6px 0px;
+        }
     }
     
     a, p {
