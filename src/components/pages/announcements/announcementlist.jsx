@@ -74,6 +74,14 @@ const AnnouncementList = (props) => {
         return ann.courseId === courseId;
     });
 
+    if(courseAnnouncements.length === 0){
+        return(
+            <div className='noContentFound'>
+                No announcements have been posted for this course.
+            </div>
+        )
+    }
+
     return(
         <div className='announcementListWrapper'>
             {courseAnnouncements.map((ann, index) => {
