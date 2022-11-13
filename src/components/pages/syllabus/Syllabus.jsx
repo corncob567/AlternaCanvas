@@ -450,7 +450,7 @@ const Syllabus = (props) => {
     const courseId = props.courseId
     return (
         <div className='pageWrapper'>
-            <h1 className='pageTitle'>Syllabus <AiFillPushpin style={{verticalAlign: 'none'}}/></h1>
+            <h1 className='pageTitle'>Syllabus <AiFillPushpin /></h1>
             <CourseSyllabus courseId={courseId}/>
         </div>
     );

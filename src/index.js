@@ -7,6 +7,7 @@ import Assignments from './components/pages/assignments/assignments';
 import Modules from './components/pages/modules/modules';
 import Announcements from './components/pages/announcements/announcements';
 import Grades from './components/pages/grades/grades';
+import Zoom from './components/pages/zoom/zoom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -21,6 +22,7 @@ root.render(
         <Route path="modules" element={<Modules courseId={'compg'}/>}/>
         <Route path="announcements" element={<Announcements courseId={'compg'}/>}/>
         <Route path="grades" element={<Grades courseId={'compg'}/>}/>
+        <Route path="zoom" element={<Zoom courseId={'compg'}/>}/>
       </Route>
       <Route path="/ui" element={<App/>} >
         <Route exact path="syllabus" element={<Syllabus courseId={'ui'}/>}/>
@@ -28,6 +30,7 @@ root.render(
         <Route path="modules" element={<Modules courseId={'ui'}/>}/>
         <Route path="announcements" element={<Announcements courseId={'ui'}/>}/>
         <Route path="grades" element={<Grades courseId={'ui'}/>}/>
+        <Route path="zoom" element={<Zoom courseId={'ui'}/>}/>
       </Route>
       <Route path="/seniordesign" element={<App/>} >
         <Route exact path="syllabus" element={<Syllabus courseId={'seniordesign'}/>}/>
@@ -35,6 +38,7 @@ root.render(
         <Route path="modules" element={<Modules courseId={'seniordesign'}/>}/>
         <Route path="announcements" element={<Announcements courseId={'seniordesign'}/>}/>
         <Route path="grades" element={<Grades courseId={'seniordesign'}/>}/>
+        <Route path="zoom" element={<Zoom courseId={'seniordesign'}/>}/>
       </Route>
     </Routes>
   </BrowserRouter>

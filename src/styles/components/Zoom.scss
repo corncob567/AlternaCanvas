@@ -1,0 +1,11 @@
+.zoomMeetingTable{
+    tbody{
+        tr:hover{
+            background-color: $secondary-2;
+        }
+        td{
+            vertical-align: middle;
+        }
+    }
+    margin-top: 20px;
+}

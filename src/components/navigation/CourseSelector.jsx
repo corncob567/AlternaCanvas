@@ -20,8 +20,6 @@ function CourseSelector(props) {
         )
     }
     
-    console.log(props.chats)
-
     return (
         <>
         <div className='courseSelector'>
@@ -55,6 +53,7 @@ function CourseSelector(props) {
                 courseImg={`../../assets/${courseInfo[`${activeCourse}`].courseImg}`}
                 courseProfessor={courseInfo[`${activeCourse}`].courseProfessor}
                 chats={props.chats}
+                setCurrChatName={props.setCurrChatName}
             />
         </div>
         </>
