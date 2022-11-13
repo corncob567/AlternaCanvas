@@ -34,6 +34,9 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
                 <li>
                     <NavLink to='grades' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Grades</NavLink>
                 </li>
+                <li>
+                    <NavLink to='zoom' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Zoom</NavLink>
+                </li>
                 <br></br>
                 {chats.map((chat) => {
                     return <ChatSelect chatName={chat} click={() => updateCurrChatName(chat)}></ChatSelect>

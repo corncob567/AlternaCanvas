@@ -172,6 +172,14 @@ const ModuleList = (props) => {
         return module.courseId === courseId;
     });
 
+    if(courseModules.length === 0){
+        return(
+            <div className='noContentFound'>
+                No modules have been posted for this course.
+            </div>
+        )
+    }
+
     return(
         <div className='moduleListWrapper'>
             {courseModules.map((module, index) => {
