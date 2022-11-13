@@ -71,8 +71,8 @@ const grades = [
 
 const GradeList = (props) => {
     const courseId = props.courseId
-    var courseGrades = grades.filter(function(ann){
-        return ann.courseId === courseId;
+    var courseGrades = grades.filter(function(grade){
+        return grade.courseId === courseId;
     });
 
     return(
