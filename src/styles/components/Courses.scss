@@ -1,8 +1,15 @@
+.courseSelector--container{
+    height: 100vh;
+}
+
 .courseNav{
     border-right: 5px $primary-3 solid;
     border-left: 5px $primary-3 solid;
     background-color: $secondary-2;
     width: 215px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     &--pages {
         text-align: center;
@@ -36,8 +43,8 @@
     ul {
         margin: 0;
         padding: 0;
-        height: 90vh;
         overflow: auto; /* Enable scrolling if the sidenav has too much content */
+        height: inherit;
     }
     
     a, p {
@@ -66,7 +73,6 @@
     }
     &--courses {
         overflow: hidden;
-        overflow-y: scroll;
         max-height: 85vh;
     }
 }
