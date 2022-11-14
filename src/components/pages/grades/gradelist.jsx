@@ -6,7 +6,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Project 2",
-        earnedPoints: 48,
+        earnedPoints: 45,
         totalPoints: 50,
         courseId: "ui",
         type: "project",
@@ -15,7 +15,7 @@ const grades = [
     {
         date: "11/11/22",
         title: "Exam",
-        earnedPoints: 50,
+        earnedPoints: 40,
         totalPoints: 50,
         courseId: "ui",
         type: "final",
@@ -24,7 +24,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Group Work",
-        earnedPoints: 8,
+        earnedPoints: 2,
         totalPoints: 8,
         courseId: "ui",
         type: "participation",
@@ -33,7 +33,7 @@ const grades = [
     {
         date: "11/09/22",
         title: "Homework 5",
-        earnedPoints: 15,
+        earnedPoints: 5,
         totalPoints: 20,
         courseId: "ui",
         type: "assignment",
@@ -42,7 +42,7 @@ const grades = [
     {
         date: "10/30/22",
         title: "Homework 4",
-        earnedPoints: 18,
+        earnedPoints: 10,
         totalPoints: 20,
         courseId: "ui",
         type: "assignment",
@@ -51,7 +51,7 @@ const grades = [
     {
         date: "10/15/22",
         title: "Project 1",
-        earnedPoints: 45,
+        earnedPoints: 4,
         totalPoints: 50,
         courseId: "ui",
         type: "project",
@@ -60,7 +60,7 @@ const grades = [
     {
         date: "10/10/22",
         title: "Homework 1",
-        earnedPoints: 19,
+        earnedPoints: 6,
         totalPoints: 20,
         courseId: "compg",
         type: "assignment",
@@ -69,7 +69,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Final Exam",
-        earnedPoints: 180,
+        earnedPoints: 50,
         totalPoints: 200,
         courseId: "compg",
         type: "final",
@@ -78,7 +78,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Project 3",
-        earnedPoints: 14,
+        earnedPoints: 8,
         totalPoints: 20,
         courseId: "compg",
         type: "project",
@@ -87,7 +87,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Project 2",
-        earnedPoints: 12,
+        earnedPoints: 2,
         totalPoints: 20,
         courseId: "compg",
         type: "project",
@@ -96,7 +96,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Project 1",
-        earnedPoints: 16,
+        earnedPoints: 6,
         totalPoints: 20,
         courseId: "compg",
         type: "project",
@@ -105,7 +105,7 @@ const grades = [
     {
         date: "11/10/22",
         title: "Check-point 3",
-        earnedPoints: 14,
+        earnedPoints: 4,
         totalPoints: 20,
         courseId: "seniordesign",
         type: "assignment",
@@ -114,7 +114,7 @@ const grades = [
     {
         date: "11/6/22",
         title: "Progress Essay",
-        earnedPoints: 95,
+        earnedPoints: 90,
         totalPoints: 100,
         courseId: "seniordesign",
         type: "project",
@@ -123,12 +123,319 @@ const grades = [
     {
         date: "11/10/22",
         title: "Presentation",
-        earnedPoints: 18,
+        earnedPoints: 14,
         totalPoints: 20,
         courseId: "seniordesign",
         type: "final",
         user: "baru"
     },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 49,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "alex"
+    },
+    {
+        date: "11/11/22",
+        title: "Exam",
+        earnedPoints: 50,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "final",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Group Work",
+        earnedPoints: 8,
+        totalPoints: 8,
+        courseId: "ui",
+        type: "participation",
+        user: "alex"
+    },
+    {
+        date: "11/09/22",
+        title: "Homework 5",
+        earnedPoints: 17,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "alex"
+    },
+    {
+        date: "10/30/22",
+        title: "Homework 4",
+        earnedPoints: 19,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "alex"
+    },
+    {
+        date: "10/15/22",
+        title: "Project 1",
+        earnedPoints: 49,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "alex"
+    },
+    {
+        date: "10/10/22",
+        title: "Homework 1",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "assignment",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Final Exam",
+        earnedPoints: 190,
+        totalPoints: 200,
+        courseId: "compg",
+        type: "final",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 3",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 17,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 1",
+        earnedPoints: 17,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "alex"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 46,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "liz"
+    },
+    {
+        date: "11/11/22",
+        title: "Exam",
+        earnedPoints: 50,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "final",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Group Work",
+        earnedPoints: 8,
+        totalPoints: 8,
+        courseId: "ui",
+        type: "participation",
+        user: "liz"
+    },
+    {
+        date: "11/09/22",
+        title: "Homework 5",
+        earnedPoints: 19,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "liz"
+    },
+    {
+        date: "10/30/22",
+        title: "Homework 4",
+        earnedPoints: 16,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "liz"
+    },
+    {
+        date: "10/15/22",
+        title: "Project 1",
+        earnedPoints: 47,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "liz"
+    },
+    {
+        date: "10/10/22",
+        title: "Homework 1",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "assignment",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Final Exam",
+        earnedPoints: 198,
+        totalPoints: 200,
+        courseId: "compg",
+        type: "final",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 3",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 19,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 1",
+        earnedPoints: 19,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Check-point 3",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "seniordesign",
+        type: "assignment",
+        user: "liz"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 48,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "daniel"
+    },
+    {
+        date: "11/11/22",
+        title: "Exam",
+        earnedPoints: 40,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "final",
+        user: "daniel"
+    },
+    {
+        date: "11/10/22",
+        title: "Group Work",
+        earnedPoints: 7,
+        totalPoints: 8,
+        courseId: "ui",
+        type: "participation",
+        user: "daniel"
+    },
+    {
+        date: "11/09/22",
+        title: "Homework 5",
+        earnedPoints: 15,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "daniel"
+    },
+    {
+        date: "10/30/22",
+        title: "Homework 4",
+        earnedPoints: 18,
+        totalPoints: 20,
+        courseId: "ui",
+        type: "assignment",
+        user: "daniel"
+    },
+    {
+        date: "10/15/22",
+        title: "Project 1",
+        earnedPoints: 45,
+        totalPoints: 50,
+        courseId: "ui",
+        type: "project",
+        user: "daniel"
+    },
+    {
+        date: "10/10/22",
+        title: "Homework 1",
+        earnedPoints: 17,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "assignment",
+        user: "daniel"
+    },
+    {
+        date: "11/10/22",
+        title: "Final Exam",
+        earnedPoints: 190,
+        totalPoints: 200,
+        courseId: "compg",
+        type: "final",
+        user: "daniel"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 3",
+        earnedPoints: 18,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "daniel"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 2",
+        earnedPoints: 20,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "daniel"
+    },
+    {
+        date: "11/10/22",
+        title: "Project 1",
+        earnedPoints: 18,
+        totalPoints: 20,
+        courseId: "compg",
+        type: "project",
+        user: "daniel"
+    },
+
 ];
 
 
@@ -198,11 +505,29 @@ const GradeList = (props) => {
 
     let totalGrade = parseInt((assignmentPercent * assignment) + (participationPercent * participation) + (projectPercent * project) + (finalExamPercent * final));
 
+    // set display student name:
+    let fullName = "";
+    if (user == "alex")
+    {
+        fullName = "Alex Mills"
+    }
+    else if(user == "daniel"){
+        fullName = "Daniel Hackney"
+    }
+    else if(user == "liz"){
+        fullName = "Liz Tremblay"
+    }
+    else if(user == "baru"){
+        fullName = "Baru Yogesh"
+    }
+
+
+
     return(
         <div>
             <div class="totalGradeContainer">
                 <div class='classInfo'>
-                    <div>Student: {user} </div> 
+                    <div>Student: {fullName} </div> 
                     <div class='classGrade'>Total: {totalGrade}%</div>
                 </div>
                 <div>
