@@ -26,19 +26,11 @@ function ChatButtons() {
 
 function ChatHeader(props) {
     return (
-        <Container className='chat-header' fluid>
-            <Row>
-                <Col>
-                    <ProfilePicture url={props.url} maxHeight={50}></ProfilePicture>
-                </Col>
-                <Col className='align-self-center'>
-                    <p style={{margin: 0}}>{props.name}</p>
-                </Col>
-                <Col>
-                    <ChatButtons></ChatButtons>
-                </Col>
-            </Row>
-        </Container>
+        <div className='chat-header' fluid>
+            <ProfilePicture url={props.url} maxHeight={50}></ProfilePicture>
+            <p className='chatName'>{props.name}</p>
+            <ChatButtons></ChatButtons>
+        </div>
 
     )
 }

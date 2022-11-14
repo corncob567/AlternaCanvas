@@ -17,7 +17,7 @@ function ChatMessage(props) {
         <div className='sender-container'>
             <div className='pfp'><ProfilePicture url='https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png' maxHeight={30}></ProfilePicture></div>
 
-            <p className='chat-message' style={{margin: 0}}>{props.content}</p>
+            <p className='chat-message'>{props.content}</p>
             <p className='chat-time'>{(new Date()).getHours() + ":" + (new Date()).getMinutes()}</p>
         </div>
     )

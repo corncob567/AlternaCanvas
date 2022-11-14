@@ -538,19 +538,19 @@ const GradeList = (props) => {
     let finalExamTotal = 0;
 
     let classTotal = function(grade){
-        if (grade.type == "assignment"){
+        if (grade.type === "assignment"){
             assignmentEarned += grade.earnedPoints;
             assignmentTotal += grade.totalPoints;
         }
-        else if (grade.type == "participation"){
+        else if (grade.type === "participation"){
             participationEarned += grade.earnedPoints;
             participationTotal += grade.totalPoints;
         }
-        else if (grade.type == "project"){
+        else if (grade.type === "project"){
             projectEarned += grade.earnedPoints;
             projectTotal += grade.totalPoints;
         }
-        else if (grade.type == "final"){
+        else if (grade.type === "final"){
             finalExamEarned += grade.earnedPoints;
             finalExamTotal += grade.totalPoints;
         }
@@ -566,39 +566,39 @@ const GradeList = (props) => {
     let project = 0.75
     let final = 0.1
 
-    if (courseId == "seniordesign"){
+    if (courseId === "seniordesign"){
         assignment = 0.1
         participation = 0
         project = 0.8
         final = 0.1
     }
-    else if (courseId == "compg"){
+    else if (courseId === "compg"){
         assignment = 0.3
         participation = 0.1
         project = 0.5
         final = 0.1
     }
 
-    let assignmentPercent = assignmentEarned == 0 ? 0 : ((assignmentEarned/assignmentTotal) * 100);
-    let participationPercent = participationEarned == 0 ? 0 : ((participationEarned/participationTotal) * 100);
-    let projectPercent = projectEarned == 0 ? 0 : ((projectEarned/projectTotal) * 100);
-    let finalExamPercent = finalExamEarned == 0 ? 0 : ((finalExamEarned/finalExamTotal) * 100);
+    let assignmentPercent = assignmentEarned === 0 ? 0 : ((assignmentEarned/assignmentTotal) * 100);
+    let participationPercent = participationEarned === 0 ? 0 : ((participationEarned/participationTotal) * 100);
+    let projectPercent = projectEarned === 0 ? 0 : ((projectEarned/projectTotal) * 100);
+    let finalExamPercent = finalExamEarned === 0 ? 0 : ((finalExamEarned/finalExamTotal) * 100);
 
     let totalGrade = parseInt((assignmentPercent * assignment) + (participationPercent * participation) + (projectPercent * project) + (finalExamPercent * final));
 
     // set display student name:
     let fullName = "";
-    if (user == "alex")
+    if (user === "alex")
     {
         fullName = "Alex Mills"
     }
-    else if(user == "daniel"){
+    else if(user === "daniel"){
         fullName = "Daniel Hackney"
     }
-    else if(user == "liz"){
+    else if(user === "liz"){
         fullName = "Liz Tremblay"
     }
-    else if(user == "baru"){
+    else if(user === "baru"){
         fullName = "Baru Yogesh"
     }
 

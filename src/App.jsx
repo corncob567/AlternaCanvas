@@ -13,24 +13,24 @@ function App() {
 
   const [chatData, setChatData] = useState({
     "baru": {
-      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "baru"}]},
-      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "baru"}]},
-      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "baru"}]},
+      "liz": {"data": [{"content":"baruuuuuuu", "author": "liz"}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz"}]},
+      "daniel": {"data": [{"content":"hey man whats up", "author": "baru"}, {"content":"nothin much barubasaur", "author": "daniel"}, {"content":"never call me that again", "author": "baru"}, {"content":"no", "author": "daniel"}]},
+      "alex": {"data": [{"content":"BARU WAKE UP!!", "author": "alex"}, {"content":"LEAVE ME ALONEEEEE", "author": "baru"}]},
     },
     "liz": {
-      "baru": {"data": [{"content":"test1", "author": "baru"}, {"content":"test2", "author": "liz"}]},
-      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "liz"}]},
-      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "liz"}]},
+      "baru": {"data": [{"content":"baruuuuuuu", "author": "liz"}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz"}]},
+      "daniel": {"data": [{"content":"omw to the library now", "author": "liz"}, {"content":"Are you at Langsam?", "author": "daniel"}, {"content":"Yeah just got there", "author": "liz"}]},
+      "alex": {"data": [{"content":"hey lizzo", "author": "alex"}, {"content":"whats goin on chungus", "author": "liz"}, {"content":"are you slaying per usual", "author": "liz"}, {"content":"you know it", "author": "alex"}]},
     },
     "daniel": {
-      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "daniel"}]},
-      "baru": {"data": [{"content":"test3", "author": "baru"}, {"content":"test4", "author": "daniel"}]},
-      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "daniel"}]},
+      "liz": {"data": [{"content":"omw to the library now", "author": "liz"}, {"content":"Are you at Langsam?", "author": "daniel"}, {"content":"Yeah just got there", "author": "liz"}]},
+      "baru": {"data": [{"content":"hey man whats up", "author": "baru"}, {"content":"nothin much barubasaur", "author": "daniel"}, {"content":"never call me that again", "author": "baru"}, {"content":"no", "author": "daniel"}]},
+      "alex": {"data": [{"content":"hey alex how's it goin?", "author": "daniel"}, {"content":"terrible", "author": "alex"}, {"content":"same fr", "author": "daniel"}, {"content":"i feel like a ghost", "author": "alex"}, {"content":"honestly, same", "author": "daniel"}]},
     },
     "alex": {
-      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "alex"}]},
-      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "alex"}]},
-      "baru": {"data": [{"content":"test5", "author": "baru"}, {"content":"test6", "author": "alex"}]},
+      "liz": {"data": [{"content":"hey lizzo", "author": "alex"}, {"content":"whats goin on chungus", "author": "liz"}, {"content":"are you slaying per usual", "author": "liz"}, {"content":"you know it", "author": "alex"}]},
+      "daniel": {"data": [{"content":"hey alex how's it goin?", "author": "daniel"}, {"content":"terrible", "author": "alex"}, {"content":"same fr", "author": "daniel"}, {"content":"i feel like a ghost", "author": "alex"}, {"content":"honestly, same", "author": "daniel"}]},
+      "baru": {"data": [{"content":"BARU WAKE UP!!", "author": "alex"}, {"content":"LEAVE ME ALONEEEEE", "author": "baru"}]},
     }
   })
 

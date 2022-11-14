@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import React from "react";
 
-import '../../styles/components/Chat.scss'
+import '../../styles/main.scss'
 
 function ChatWindow(props) {
 
