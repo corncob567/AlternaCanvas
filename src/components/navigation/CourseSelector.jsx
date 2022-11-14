@@ -54,6 +54,7 @@ function CourseSelector(props) {
                 courseProfessor={courseInfo[`${activeCourse}`].courseProfessor}
                 chats={props.chats}
                 setCurrChatName={props.setCurrChatName}
+                user={props.user}
             />
         </div>
         </>

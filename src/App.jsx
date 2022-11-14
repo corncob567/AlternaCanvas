@@ -15,14 +15,17 @@ function App() {
     "liz": {"data": [{"content":"test1", "author": "false"}, {"content":"test2", "author": "true"}]},
     "daniel": {"data": [{"content":"test3", "author": "false"}, {"content":"test4", "author": "true"}]},
     "alex": {"data": [{"content":"test5", "author": "false"}, {"content":"test6", "author": "true"}]},
+    "baru": {"data": [{"content":"test7", "author": "false"}, {"content":"test8", "author": "true"}]},
   })
 
   let [currChatName, setCurrChatName] = useState('liz');
 
+  let [user, setUser] = useState('baru');
+
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName}/>
+            <CourseSelector activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName} user={user}/>
           </div>
           <div className='pageOutletWrapper'>
             <Outlet/>

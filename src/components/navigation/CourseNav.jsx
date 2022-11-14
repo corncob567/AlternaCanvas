@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import ChatSelect from './ChatSelect';
 
-function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, setCurrChatName}) {
+function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, setCurrChatName, user}) {
     function updateCurrChatName(chatName){
         setCurrChatName(currChatName => currChatName = chatName)
     }
@@ -39,6 +39,9 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
                 </ul>
                 <ul className='courseNav--chats'>
                     {chats.map((chat) => {
+                        if (chat === user){
+                            return null;
+                        }
                         return <ChatSelect chatName={chat} click={() => updateCurrChatName(chat)}></ChatSelect>
                     })}
                 </ul>
