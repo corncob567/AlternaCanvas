@@ -185,14 +185,32 @@ const GradeList = (props) => {
 
     return(
         <div className='announcementListWrapper'>
-            <div>
-                {totalGrade}
+            <div class="totalGradeContainer">
+                <div className='classGrade'>
+                    Total: {totalGrade}%
+                </div>
+                <div class='weighting'>
+                Grade Details: <br />
+                Assigments: {assignment * 100}% <br />
+                Participation: {participation * 100}% <br />
+                Projects: {project * 100}% <br /> 
+                Final Exam:  {final * 100}% <br />
+                </div>
             </div>
-            {courseGrades.map((ann, index) => {
-                return (
-                    <SingleGrade key={index} gradeInfo={ann}/>
-                );
-            })}
+            <table class="gradeTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Due</th>
+                    <th>Score</th>
+                    <th>Percentage</th>
+                    <th>Letter Grade</th>
+                </tr>
+                    {courseGrades.map((ann, index) => {
+                        return (
+                            <SingleGrade key={index} gradeInfo={ann}/>
+                        );
+                    })}
+            </table>
         </div>
     );
 };
