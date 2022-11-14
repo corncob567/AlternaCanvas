@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'components/Courses.scss';
 @import 'components/Pages.scss';
+@import 'components/Assignments.scss';
 @import 'components/Chat.scss';
 @import 'components/Syllabus.scss';
 @import 'components/Announcements.scss';
@@ -38,4 +39,21 @@
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.button {
+    border-radius: 12px;
+    color: $secondary-1;
+    padding: 12px;
+    font-family: inherit;
+    margin: 0px 8px;
+    border-style: none;
+
+    &.primary {
+        background-color: $primary-2;
+    }
+
+    &.secondary {
+        background-color: $primary-3;
+    }
 }
