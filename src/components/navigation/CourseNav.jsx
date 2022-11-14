@@ -1,18 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../styles/main.scss';
 import { NavLink } from 'react-router-dom';
-import { propTypes } from 'react-bootstrap/esm/Image';
-import ChatSelect from './ChatSelect';
+import ChatSelector from './ChatSelector';
+import uiux from '../../assets/uiux.png';
+import compgraphics from '../../assets/compgraphics.png';
 
-function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, setCurrChatName, user}) {
-    function updateCurrChatName(chatName){
-        setCurrChatName(currChatName => currChatName = chatName)
+function CourseNav({courseID, courseName, courseImg, courseProfessor, currChatName, chats, setCurrChatName, user}) {
+    let dynamicCourseImg;
+    switch(courseImg){
+        case '../../assets/uiux.png':
+            dynamicCourseImg = <img src={uiux} alt={courseName} className="courseNav--img"/>;
+        break;
+        case '../../assets/compgraphics.png':
+            dynamicCourseImg = <img src={compgraphics} alt={courseName} className="courseNav--img"/>;
+        break;
+        default:
+            dynamicCourseImg = <img src={''} alt={courseName} className="courseNav--img"/>;
     }
 
     return (
         <div className='courseNav'>
             <div className='courseNav--course-info'>
-                <img src={courseImg} alt={courseName} className="courseNav--img"/>
+                {dynamicCourseImg}
                 <h3 className='courseNav--courseTitle'>{courseName}</h3>
                 <p className='courseNav---courseProfessor'>{courseProfessor}</p>
                 <hr className="courseNav--line"></hr>
@@ -40,14 +49,7 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, chats, set
                     {/* <br></br> */}
                     <hr className="courseNav--line"></hr>
                 </ul>
-                <ul className='courseNav--chats'>
-                    {chats.map((chat) => {
-                        if (chat === user){
-                            return null;
-                        }
-                        return <ChatSelect chatName={chat} click={() => updateCurrChatName(chat)}></ChatSelect>
-                    })}
-                </ul>
+                <ChatSelector chats={chats} setCurrChatName={setCurrChatName} currChatName={currChatName} user={user}/>
             </div>
         </div>
     );

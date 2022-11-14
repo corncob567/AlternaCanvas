@@ -51,3 +51,7 @@
     text-align: right;
     background-color: lightgrey;
 }
+
+.chatSelectItem--active{
+    background: rgba(182, 143, 255, 0.4); // Setting background rather than opacity to prevent text from being transparent
+}

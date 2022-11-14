@@ -3,8 +3,8 @@ import '../../styles/main.scss';
 
 export default function ChatSelect(props){
     return (
-        <li>
-            <a onClick={props.click}>{props.chatName}</a>
+        <li className={`chatSelectItem${props.currChatName === props.chatName ? "--active" : ""}`}>
+            <a className='chatSelectItemTag' onClick={() => props.setCurrChatName(props.chatName)}>{props.chatName}</a>
         </li>
     )
 }
