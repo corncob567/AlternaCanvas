@@ -12,13 +12,26 @@ import {BsUpload, BsPeople, BsInfoCircle } from 'react-icons/bs'
 
 import '../../styles/main.scss'
 
-function ChatButtons() {
+function ChatButtons(props) {
+    if (props.name.startsWith('assn-')) {
+        return (
+
+            <div>
+                <ButtonGroup>
+                    <Button variant="outline-secondary"><BsUpload/></Button>
+                    <Button variant="outline-secondary"><BsPeople/></Button>
+                    <Button variant="outline-secondary"><BsInfoCircle/></Button>
+                </ButtonGroup>
+            </div>
+        )
+    }
+
     return (
+
         <div>
             <ButtonGroup>
-                <Button variant="outline-secondary"><BsUpload/></Button>
-                <Button variant="outline-secondary"><BsPeople/></Button>
                 <Button variant="outline-secondary"><BsInfoCircle/></Button>
+
             </ButtonGroup>
         </div>
     )
@@ -32,10 +45,10 @@ function ChatHeader(props) {
                     <ProfilePicture url={props.url} maxHeight={50}></ProfilePicture>
                 </Col>
                 <Col className='align-self-center'>
-                    <p style={{margin: 0}}>{props.name}</p>
+                    <p style={{margin: 0}}>{props.name.startsWith('assn-') ? props.name.substring(5) : props.name}</p>
                 </Col>
                 <Col>
-                    <ChatButtons></ChatButtons>
+                    <ChatButtons name={props.name}></ChatButtons>
                 </Col>
             </Row>
         </Container>
