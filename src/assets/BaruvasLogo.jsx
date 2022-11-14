@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Form from 'react-bootstrap/Form';
 
-function BaruvasLogo() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="80.122" height="92" viewBox="0 0 70.122 82" className='baruvasLogo'>
+
+const BaruvasToggle = React.forwardRef(({ onClick }, ref) => (
+
+<svg ref={ref} onClick={onClick} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="80.122" height="92" viewBox="0 0 70.122 82" className='baruvasLogo'>
       <defs>
         <filter id="Path_25" x="0" y="0" width="70.903" height="81.731" filterUnits="userSpaceOnUse">
           <feOffset dx="5" dy="6" input="SourceAlpha"/>
@@ -42,6 +45,55 @@ function BaruvasLogo() {
         <text id="B" transform="translate(15.122 54)" fill="#262626" fontSize="50" fontFamily="Optima-Bold, Optima" fontWeight="700"><tspan x="0" y="0">B</tspan></text>
       </g>
     </svg>
+  
+));
+
+const CustomMenu = React.forwardRef(
+  ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
+    const [value, setValue] = useState('');
+
+    return (
+      <div
+        ref={ref}
+        style={style}
+        className={className}
+        aria-labelledby={labeledBy}
+      >
+        <ul className="list-unstyled">
+          {React.Children.toArray(children).filter(
+            (child) =>
+              !value || child.props.children.toLowerCase().startsWith(value),
+          )}
+        </ul>
+      </div>
+    );
+  },
+);
+function BaruvasLogo(props){
+  return (
+    <Dropdown onSelect={(eventKey) => {
+      props.setUser(eventKey)
+      let names = ['baru','liz','daniel','alex']
+      for (let name of names) {
+        if (name !== eventKey){
+          props.setCurrChatName(name)
+        }
+      }
+      }}>
+      <Dropdown.Toggle as={BaruvasToggle} id="dropdown-custom-components">
+        Custom toggle
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu as={CustomMenu}>
+        <Dropdown.Item eventKey="baru" active={props.user === 'baru'}>baru</Dropdown.Item>
+        <Dropdown.Item eventKey="liz" active={props.user === 'liz'}>liz</Dropdown.Item>
+        <Dropdown.Item eventKey="daniel" active={props.user === 'daniel'}>
+          daniel
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="alex" active={props.user === 'alex'}>alex</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   )
 }
+
 export default BaruvasLogo;

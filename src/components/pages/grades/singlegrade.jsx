@@ -9,49 +9,33 @@ const SingleGrade = (props) => {
 
     const percentage = earnedPoints/totalPoints;
     let calcGrade = function(){
-        if(courseId == "ui"){
-            if (percentage > .92){
-                return "A";
-            }
-            else if (percentage > .82){
-                return "B";
-            }
-            else if (percentage > .72){
-                return "C";
-            }else if (percentage > .62){
-                return "D";
-            }
-            else{
-                return "F";
-            }
+        if (percentage > .89){
+            return "A";
+        }
+        else if (percentage > .79){
+            return "B";
+        }
+        else if (percentage > .69){
+            return "C";
+        }
+        else if (percentage > .59){
+            return "D";
         }
         else{
-            if (percentage > .9){
-                return "A";
-            }
-            else if (percentage > .8){
-                return "B";
-            }
-            else if (percentage > .7){
-                return "C";
-            }else if (percentage > .6){
-                return "D";
-            }
-            else{
-                return "F";
-            }
+            return "F";
         }
     }
 
     const letterGrade = calcGrade();
     
     return (
-        <div className={`singleAnnouncementWrapper${isAfter ? ' recent' : ''}`}>
-            <h3 className='announcementName'>{title}</h3>
-            <p>{date}</p>
-            <label>{letterGrade}</label>
-            <label>{earnedPoints} / {totalPoints}</label>
-        </div>
+        <tr class='rowStyle'>
+        <td>{title}</td>
+        <td>{date}</td>
+        <td>{earnedPoints} / {totalPoints}</td>
+        <td>{percentage * 100}%</td>
+        <td>{letterGrade}</td>
+        </tr>
     );
 };
 

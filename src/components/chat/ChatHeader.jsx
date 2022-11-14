@@ -8,15 +8,17 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import {BsUpload, BsPeople, BsInfoCircle } from 'react-icons/bs'
+
 import '../../styles/main.scss'
 
 function ChatButtons() {
     return (
         <div>
             <ButtonGroup>
-                <Button variant="secondary">Left</Button>
-                <Button variant="secondary">Middle</Button>
-                <Button variant="secondary">Right</Button>
+                <Button variant="outline-secondary"><BsUpload/></Button>
+                <Button variant="outline-secondary"><BsPeople/></Button>
+                <Button variant="outline-secondary"><BsInfoCircle/></Button>
             </ButtonGroup>
         </div>
     )
@@ -27,10 +29,10 @@ function ChatHeader(props) {
         <Container className='chat-header' fluid>
             <Row>
                 <Col>
-                    <ProfilePicture url={props.url}></ProfilePicture>
+                    <ProfilePicture url={props.url} maxHeight={50}></ProfilePicture>
                 </Col>
-                <Col>
-                    <p>{props.name}</p>
+                <Col className='align-self-center'>
+                    <p style={{margin: 0}}>{props.name}</p>
                 </Col>
                 <Col>
                     <ChatButtons></ChatButtons>

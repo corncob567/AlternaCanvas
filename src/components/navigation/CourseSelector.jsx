@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
+import {BsPersonCircle} from 'react-icons/bs';
+
 
 function CourseSelector(props) {
 
@@ -24,7 +26,7 @@ function CourseSelector(props) {
     return (
         <>
         <div className='courseSelector'>
-            <BaruvasLogo/>
+            <BaruvasLogo setUser={props.setUser} setCurrChatName={props.setCurrChatName} user={props.user}/>
             <div className='courseSelector--courses'>
                 <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')}>
                     <Course 
@@ -46,6 +48,7 @@ function CourseSelector(props) {
                 </Link>
                 <AddCourse/>
             </div>
+            
         </div>
         <div className='courseNav--container'>
             <CourseNav 
