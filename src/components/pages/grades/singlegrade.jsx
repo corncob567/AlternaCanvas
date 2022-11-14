@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../styles/main.scss';
 
 const SingleGrade = (props) => {
-    const {date, title, totalPoints, earnedPoints, courseId} = props.gradeInfo;
+    const {date, title, totalPoints, earnedPoints, courseId, user} = props.gradeInfo;
     const dateObj = new Date(date);
     const recentCutoff = new Date('11/01/2022');
     const isAfter = dateObj > recentCutoff;
