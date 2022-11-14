@@ -1,8 +1,13 @@
+.totalGradeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .singleGradeWrapper {
   margin: 10px;
   padding: 15px;
   background-color: $secondary-2;
-  border-radius: 20px 50px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
 
@@ -10,4 +15,27 @@
     margin-left: auto;
     font-weight: 600;
   }
+}
+
+.classGrade {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.weighting {
+  margin: 10px;
+}
+
+.gradeTable {
+  width: 100%;
+}
+
+.headerStyle {
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+}
+
+.rowStyle {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
 }
