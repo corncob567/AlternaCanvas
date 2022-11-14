@@ -13,7 +13,7 @@ import {BsUpload, BsPeople, BsInfoCircle } from 'react-icons/bs'
 import '../../styles/main.scss'
 
 function ChatButtons(props) {
-    if (props.name.startsWith('assn-')) {
+    if (props.currChatData.type === 'assn') {
         return (
 
             <div>
@@ -48,7 +48,7 @@ function ChatHeader(props) {
                     <p style={{margin: 0}}>{props.name.startsWith('assn-') ? props.name.substring(5) : props.name}</p>
                 </Col>
                 <Col>
-                    <ChatButtons name={props.name}></ChatButtons>
+                    <ChatButtons name={props.name} currChatData={props.currChatData}></ChatButtons>
                 </Col>
             </Row>
         </Container>
