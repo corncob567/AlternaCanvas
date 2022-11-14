@@ -12,10 +12,26 @@ function App() {
               'ui': {courseName: 'User Interface Design', courseProfessor: 'Dr. Aurisano', courseImg: 'uiux.png'}});
 
   const [chatData, setChatData] = useState({
-    "liz": {"data": [{"content":"test1", "author": "false"}, {"content":"test2", "author": "true"}]},
-    "daniel": {"data": [{"content":"test3", "author": "false"}, {"content":"test4", "author": "true"}]},
-    "alex": {"data": [{"content":"test5", "author": "false"}, {"content":"test6", "author": "true"}]},
-    "baru": {"data": [{"content":"test7", "author": "false"}, {"content":"test8", "author": "true"}]},
+    "baru": {
+      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "baru"}]},
+      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "baru"}]},
+      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "baru"}]},
+    },
+    "liz": {
+      "baru": {"data": [{"content":"test1", "author": "baru"}, {"content":"test2", "author": "liz"}]},
+      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "liz"}]},
+      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "liz"}]},
+    },
+    "daniel": {
+      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "daniel"}]},
+      "baru": {"data": [{"content":"test3", "author": "baru"}, {"content":"test4", "author": "daniel"}]},
+      "alex": {"data": [{"content":"test5", "author": "alex"}, {"content":"test6", "author": "daniel"}]},
+    },
+    "alex": {
+      "liz": {"data": [{"content":"test1", "author": "liz"}, {"content":"test2", "author": "alex"}]},
+      "daniel": {"data": [{"content":"test3", "author": "daniel"}, {"content":"test4", "author": "alex"}]},
+      "baru": {"data": [{"content":"test5", "author": "baru"}, {"content":"test6", "author": "alex"}]},
+    }
   })
 
   let [currChatName, setCurrChatName] = useState('liz');
@@ -31,7 +47,7 @@ function App() {
             <Outlet/>
           </div>
           <div className='chatColumn'>
-            <ChatWindow currChatData={chatData[currChatName]} currChatName={currChatName} setChatData={setChatData}/>
+            <ChatWindow currChatData={chatData[user][currChatName]} currChatName={currChatName} setChatData={setChatData} user={user}/>
           </div>
       </div>
   );

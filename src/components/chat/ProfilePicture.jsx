@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image'
 
 function ProfilePicture(props) {
     return (
-        <Image style={{maxHeight: '50px'}}
+        <Image style={{maxHeight: props.maxHeight + 'px'}}
         src={props.url}
         roundedCircle
         fluid
