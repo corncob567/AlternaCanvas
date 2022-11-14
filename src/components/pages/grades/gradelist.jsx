@@ -521,14 +521,13 @@ const GradeList = (props) => {
         fullName = "Baru Yogesh"
     }
 
-
-
     return(
         <div>
             <div class="totalGradeContainer">
                 <div class='classInfo'>
                     <div>Student: {fullName} </div> 
                     <div class='classGrade'>Total: {totalGrade}%</div>
+                    <button class='gradeButton' type="button">Print Grades</button>
                 </div>
                 <div>
                     <div class='detailHeader'>Grade Details</div>
