@@ -5,6 +5,8 @@
 }
 
 .assignment {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
     padding: 18px 24px;
     border: 1px $secondary-3 solid;
     margin-bottom: 24px;
@@ -20,7 +22,26 @@
     }
 }
 
+.assignment-chat {
+    text-align: right;
+    display: inline;
+
+    position: relative;
+    bottom: 30px;
+    border: 2px solid black;
+    max-width: 28px;
+    max-height: 28px;
+
+    background-color: white;
+
+    padding-left: 2px;
+    padding-right: 2px;
+
+    justify-self: center;
+}
+
 .assignmentPage {
+
     text-align: center;
     margin: 24px 50px;
 
