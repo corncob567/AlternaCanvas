@@ -184,17 +184,32 @@ const GradeList = (props) => {
     let totalGrade = parseInt((assignmentPercent * assignment) + (participationPercent * participation) + (projectPercent * project) + (finalExamPercent * final));
 
     return(
-        <div className='announcementListWrapper'>
+        <div>
             <div class="totalGradeContainer">
                 <div className='classGrade'>
                     Total: {totalGrade}%
                 </div>
-                <div class='weighting'>
-                Grade Details: <br />
-                Assigments: {assignment * 100}% <br />
-                Participation: {participation * 100}% <br />
-                Projects: {project * 100}% <br /> 
-                Final Exam:  {final * 100}% <br />
+                <div>
+                <div class='detailHeader'>Grade Details:</div>
+                Grades are weighted by the following scale:
+                <table class='weighting'>
+                    <tr>
+                        <td>Assigments:</td>
+                        <td>{assignment * 100}%</td>
+                    </tr>
+                    <tr>
+                        <td>Participation:</td>
+                        <td>{participation * 100}%</td>
+                    </tr>
+                    <tr>
+                        <td>Projects:</td>
+                        <td>{project * 100}%</td>
+                    </tr>
+                    <tr>
+                        <td>Final Exam:</td>
+                        <td>{final * 100}%</td>
+                    </tr>
+                </table>
                 </div>
             </div>
             <table class="gradeTable">
