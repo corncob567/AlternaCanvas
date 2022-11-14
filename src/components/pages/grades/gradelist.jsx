@@ -198,7 +198,7 @@ const GradeList = (props) => {
                 </div>
             </div>
             <table class="gradeTable">
-                <tr>
+                <tr class='headerStyle'>
                     <th>Name</th>
                     <th>Due</th>
                     <th>Score</th>

@@ -29,11 +29,13 @@ const SingleGrade = (props) => {
     const letterGrade = calcGrade();
     
     return (
-        <tr><td>{title}</td>
+        <tr class='rowStyle'>
+        <td>{title}</td>
         <td>{date}</td>
         <td>{earnedPoints} / {totalPoints}</td>
         <td>{percentage * 100}%</td>
-        <td>{letterGrade}</td></tr>
+        <td>{letterGrade}</td>
+        </tr>
     );
 };
 

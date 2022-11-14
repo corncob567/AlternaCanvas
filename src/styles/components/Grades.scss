@@ -26,24 +26,16 @@
   margin: 10px;
 }
 
-.tableHeader {
-  display: flex;
-  justify-content: space-between;
-}
-
-.headerLabel {
-  margin: 10px;
-}
-
-.singleGrade {
-  display: flex;
-  justify-content: space-between;
-}
-
-.gradeContent {
-  margin: 10px;
-}
-
 .gradeTable {
   width: 100%;
+}
+
+.headerStyle {
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+}
+
+.rowStyle {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
 }
