@@ -51,10 +51,10 @@
 .chat-message-author {
     text-align: right;
     background-color: lightgrey;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding-right: 5px;
+}
 
+.chatSelectItem--active{
+    background: rgba(182, 143, 255, 0.4); // Setting background rather than opacity to prevent text from being transparent
 }
 
 .chat-message {

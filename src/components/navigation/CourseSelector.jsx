@@ -10,7 +10,7 @@ import {BsPersonCircle} from 'react-icons/bs';
 
 function CourseSelector(props) {
 
-    const {activeCourse, setActiveCourse, courseInfo} = props;
+    const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
     
     const Course = ({ courseName, courseImg, courseColor }) => {
 
@@ -18,6 +18,7 @@ function CourseSelector(props) {
 
         return (
             <div className='course'>
+                {courseName}
             </div>
         )
     }
@@ -55,6 +56,7 @@ function CourseSelector(props) {
                 courseName={courseInfo[`${activeCourse}`].courseName}
                 courseImg={`../../assets/${courseInfo[`${activeCourse}`].courseImg}`}
                 courseProfessor={courseInfo[`${activeCourse}`].courseProfessor}
+                currChatName={currChatName}
                 chats={props.chats}
                 setCurrChatName={props.setCurrChatName}
                 user={props.user}
