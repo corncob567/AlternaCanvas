@@ -186,30 +186,32 @@ const GradeList = (props) => {
     return(
         <div>
             <div class="totalGradeContainer">
-                <div className='classGrade'>
-                    Total: {totalGrade}%
+                <div class='classInfo'>
+                    <div>Student: Alex Mills</div> 
+                    <div>Course ID: {courseId}</div>
+                    <div class='classGrade'>Total: {totalGrade}%</div>
                 </div>
                 <div>
-                <div class='detailHeader'>Grade Details:</div>
-                Grades are weighted by the following scale:
-                <table class='weighting'>
-                    <tr>
-                        <td>Assigments:</td>
-                        <td>{assignment * 100}%</td>
-                    </tr>
-                    <tr>
-                        <td>Participation:</td>
-                        <td>{participation * 100}%</td>
-                    </tr>
-                    <tr>
-                        <td>Projects:</td>
-                        <td>{project * 100}%</td>
-                    </tr>
-                    <tr>
-                        <td>Final Exam:</td>
-                        <td>{final * 100}%</td>
-                    </tr>
-                </table>
+                    <div class='detailHeader'>Grade Details</div>
+                    Grades are weighted by the following <br /> scale:
+                    <table class='weighting'>
+                        <tr class='weightRow-first'>
+                            <td>Assigments:</td>
+                            <td>{assignment * 100}%</td>
+                        </tr>
+                        <tr class='weightRow'>
+                            <td>Participation:</td>
+                            <td>{participation * 100}%</td>
+                        </tr>
+                        <tr class='weightRow'>
+                            <td>Projects:</td>
+                            <td>{project * 100}%</td>
+                        </tr>
+                        <tr class='weightRow'>
+                            <td>Final Exam:</td>
+                            <td>{final * 100}%</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <table class="gradeTable">

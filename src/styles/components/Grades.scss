@@ -1,6 +1,7 @@
 .totalGradeContainer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .singleGradeWrapper {
@@ -19,17 +20,31 @@
 
 .classGrade {
   font-size: 40px;
+  margin-top: 50px;
+}
+
+.classInfo {
+  font-size: 30px;
   margin: 10px;
 }
 
 .weighting {
-  margin: 10px;
-  width: 60%;
+  width: 100%;
+}
+
+.weightRow {
+  border-bottom: 1px solid #ddd;
+}
+
+.weightRow-first {
+  border-bottom: 1px solid #ddd;
+  border-top: 2px solid #ddd;
 }
 
 .detailHeader {
   font-weight: bold;
-  width: 60%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .gradeTable {
@@ -37,7 +52,7 @@
 }
 
 .headerStyle {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
   height: 40px;
 }
 
