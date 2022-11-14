@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../styles/main.scss";
-import backArrow from '../../../assets/backArrow';
+import BackArrow from "../../../assets/BackArrow";
 
 const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
+  const [requestExtension, setRequestExtension] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [uploadType, setUploadType] = useState('file');
+  const [renderSubmit, setRenderSubmit] = useState(false);
+
+  const clickSubmit = () => {
+    if (renderSubmit === true) {
+        setSubmitted(true)
+        setRenderSubmit(false)
+    }
+    else {
+        setRenderSubmit(true);
+    }
+  }
+
   return (
-    <div className="pageWrapper assignmentPage">
-        <backArrow/>
+    <div className="assignmentPage">
+        <div className="backArrow">
+            <BackArrow/>
+        </div>
         <div className="assignmentPage--header">
             <h1>
             {assignmentName}
             </h1>
-            <p style={{ fontStyle: "italic", fontWeight: '200' }}>
+            <p style={{ fontStyle: "italic", fontWeight: "200" }}>
             {dueDate} @ {dueTime}
             </p>
             <div className="assignmentPage--buttonWrapper">
-                <button className="button secondary">Download Files</button>
-                <button className="button secondary">Request Extension</button>
-                <button className="button primary">Submit Assignment</button>
+            {submitted ? '' : 
+                <>
+                    <button className="button secondary">Download Files</button>
+                    <button
+                        className={`button ${requestExtension ? "extension" : "secondary"}`}
+                        onClick={() => setRequestExtension(true)}
+                    >
+                        {requestExtension ? "Requested!" : "Request Extension"}
+                    </button>
+                </>}
+            <button
+                className={`button ${submitted ? "submitted" : "primary"}`}
+                onClick={() => clickSubmit()}
+            >
+                {submitted ? "Submitted!" : "Submit Assignment"}
+            </button>
             </div>
         </div>
         <div className="assignmentPage--description">
@@ -31,7 +61,6 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
             takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
-
             <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -49,7 +78,6 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
             dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
             </p>
-
             <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -80,6 +108,26 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
             ipsum dolor sit amet.
             </p>
         </div>
+        {renderSubmit ? 
+            <div className="assignmentPage--submission-container">
+                <div className="assignmentPage--submission">
+                    <div className="assignmentPage--submission-tabs">
+                        <div className={`assignmentPage--submission-tab ${uploadType ==='file' ? 'active' : ''}`} onClick={() => setUploadType("file")}>
+                            Upload file
+                        </div>
+                        <div className={`assignmentPage--submission-tab ${uploadType ==='text' ? 'active' : ''}`} onClick={() => setUploadType("text")}>
+                            Text Entry
+                        </div>
+                    </div>
+                    <div className="assignmentPage--submissionFormat">
+                        {uploadType === 'text' ? 
+                            <>
+                                <label for='textSubmit'>Enter text here: </label><input className="assignmentPage--submissionText" id='textSubmit' type='text'/>
+                            </>
+                            : <><label for='uploadSubmit'>Select file </label><button className="button upload" id="uploadSubmit">Upload</button></>}
+                    </div>
+                </div>
+            </div> : ''}
     </div>
   );
 };

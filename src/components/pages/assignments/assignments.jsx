@@ -6,6 +6,7 @@ import Assignment from './assignment';
 
 const Assignments = (props) => {
     const courseId = props.courseId;
+    
     return (
         <div className='pageWrapper'>
             <h1 className='pageTitle'>Assignments <MdAssignment/></h1>
