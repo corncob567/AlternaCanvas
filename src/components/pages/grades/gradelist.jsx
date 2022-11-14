@@ -9,7 +9,8 @@ const grades = [
         earnedPoints: 48,
         totalPoints: 50,
         courseId: "ui",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "11/11/22",
@@ -17,7 +18,8 @@ const grades = [
         earnedPoints: 50,
         totalPoints: 50,
         courseId: "ui",
-        type: "final"
+        type: "final",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -25,7 +27,8 @@ const grades = [
         earnedPoints: 8,
         totalPoints: 8,
         courseId: "ui",
-        type: "participation"
+        type: "participation",
+        user: "baru"
     },
     {
         date: "11/09/22",
@@ -33,7 +36,8 @@ const grades = [
         earnedPoints: 15,
         totalPoints: 20,
         courseId: "ui",
-        type: "assignment"
+        type: "assignment",
+        user: "baru"
     },
     {
         date: "10/30/22",
@@ -41,7 +45,8 @@ const grades = [
         earnedPoints: 18,
         totalPoints: 20,
         courseId: "ui",
-        type: "assignment"
+        type: "assignment",
+        user: "baru"
     },
     {
         date: "10/15/22",
@@ -49,7 +54,8 @@ const grades = [
         earnedPoints: 45,
         totalPoints: 50,
         courseId: "ui",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "10/10/22",
@@ -57,7 +63,8 @@ const grades = [
         earnedPoints: 19,
         totalPoints: 20,
         courseId: "compg",
-        type: "assignment"
+        type: "assignment",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -65,7 +72,8 @@ const grades = [
         earnedPoints: 180,
         totalPoints: 200,
         courseId: "compg",
-        type: "final"
+        type: "final",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -73,7 +81,8 @@ const grades = [
         earnedPoints: 14,
         totalPoints: 20,
         courseId: "compg",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -81,7 +90,8 @@ const grades = [
         earnedPoints: 12,
         totalPoints: 20,
         courseId: "compg",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -89,7 +99,8 @@ const grades = [
         earnedPoints: 16,
         totalPoints: 20,
         courseId: "compg",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -97,7 +108,8 @@ const grades = [
         earnedPoints: 14,
         totalPoints: 20,
         courseId: "seniordesign",
-        type: "assignment"
+        type: "assignment",
+        user: "baru"
     },
     {
         date: "11/6/22",
@@ -105,7 +117,8 @@ const grades = [
         earnedPoints: 95,
         totalPoints: 100,
         courseId: "seniordesign",
-        type: "project"
+        type: "project",
+        user: "baru"
     },
     {
         date: "11/10/22",
@@ -113,15 +126,17 @@ const grades = [
         earnedPoints: 18,
         totalPoints: 20,
         courseId: "seniordesign",
-        type: "final"
+        type: "final",
+        user: "baru"
     },
 ];
 
 
 const GradeList = (props) => {
     const courseId = props.courseId
+    const user = props.user;
     var courseGrades = grades.filter(function(grade){
-        return grade.courseId === courseId;
+        return (grade.courseId === courseId && grade.user === user);
     });
 
 
@@ -187,8 +202,7 @@ const GradeList = (props) => {
         <div>
             <div class="totalGradeContainer">
                 <div class='classInfo'>
-                    <div>Student: Alex Mills</div> 
-                    <div>Course ID: {courseId}</div>
+                    <div>Student: {user} </div> 
                     <div class='classGrade'>Total: {totalGrade}%</div>
                 </div>
                 <div>
