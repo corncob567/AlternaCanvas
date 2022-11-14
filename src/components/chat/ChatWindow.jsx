@@ -19,7 +19,7 @@ function ChatWindow(props) {
                 <ChatBody messages={props.currChatData} user={props.user}></ChatBody>
             </Row>
             <Row lg={1}>
-                <ChatInput addMessage={props.setChatData} currChatName={props.currChatName}></ChatInput>
+                <ChatInput addMessage={props.setChatData} currChatName={props.currChatName} user={props.user}></ChatInput>
             </Row>
         </Container>
     )

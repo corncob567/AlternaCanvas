@@ -41,7 +41,7 @@ function App() {
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector currChatName={currChatName} activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName} user={user}/>
+            <CourseSelector currChatName={currChatName} activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName} user={user} setUser={setUser}/>
           </div>
           <div className='pageOutletWrapper'>
             <Outlet/>
