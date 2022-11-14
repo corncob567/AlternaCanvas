@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-@import 'variables.scss';
-@import 'components/Courses.scss';
-@import 'components/Pages.scss';
-@import 'components/Assignments.scss';
-@import 'components/Chat.scss';
-@import 'components/Syllabus.scss';
-@import 'components/Announcements.scss';
-@import 'components/Modules.scss';
-@import 'components/Zoom.scss';
-=======
 @import "variables.scss";
 @import "components/Courses.scss";
 @import "components/Pages.scss";
+@import 'components/Assignments.scss';
 @import "components/Chat.scss";
 @import "components/Syllabus.scss";
 @import "components/Announcements.scss";
 @import "components/Modules.scss";
 @import "components/Zoom.scss";
 @import "components/Grades.scss";
->>>>>>> 22629ac1aa34215a265045b2c922c794af0ea98e
 
 .baruvasLogo {
   margin: 24px 24px -12px 24px;
