@@ -15,9 +15,9 @@ function ChatInput(props){
             // messages[props.currChatName].data = [...messages[props.currChatName].data, {'content': value, 'author': true}]
             // return messages
             let messagesCopy = JSON.parse(JSON.stringify(messages));
-            let currentMessages = messagesCopy[props.currChatName].data.slice();
-            currentMessages.push( {'content': value, 'author': 'true'});
-            messagesCopy[props.currChatName].data = currentMessages;
+            let currentMessages = messagesCopy[props.user][props.currChatName].data.slice();
+            currentMessages.push( {'content': value, 'author': props.user});
+            messagesCopy[props.user][props.currChatName].data = currentMessages;
             return messagesCopy;
         })
         setValue(value => value = '');

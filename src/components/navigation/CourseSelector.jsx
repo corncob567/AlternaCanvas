@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
+import {BsPersonCircle} from 'react-icons/bs';
+
 
 function CourseSelector(props) {
 
-    const {activeCourse, setActiveCourse, courseInfo} = props;
+    const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
     
     const Course = ({ courseName, courseImg, courseColor }) => {
 
@@ -16,6 +18,7 @@ function CourseSelector(props) {
 
         return (
             <div className='course'>
+                {courseName}
             </div>
         )
     }
@@ -23,7 +26,7 @@ function CourseSelector(props) {
     return (
         <>
         <div className='courseSelector'>
-            <BaruvasLogo/>
+            <BaruvasLogo setUser={props.setUser} setCurrChatName={props.setCurrChatName} user={props.user}/>
             <div className='courseSelector--courses'>
                 <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')}>
                     <Course 
@@ -45,6 +48,7 @@ function CourseSelector(props) {
                 </Link>
                 <AddCourse/>
             </div>
+            
         </div>
         <div className='courseNav--container'>
             <CourseNav 
@@ -52,6 +56,7 @@ function CourseSelector(props) {
                 courseName={courseInfo[`${activeCourse}`].courseName}
                 courseImg={`../../assets/${courseInfo[`${activeCourse}`].courseImg}`}
                 courseProfessor={courseInfo[`${activeCourse}`].courseProfessor}
+                currChatName={currChatName}
                 chats={props.chats}
                 setCurrChatName={props.setCurrChatName}
                 user={props.user}

@@ -5,7 +5,7 @@
 }
 
 .assignment {
-    padding: 18px 24px;
+    padding: 24px 24px;
     border: 1px $secondary-3 solid;
     margin-bottom: 24px;
 
@@ -20,11 +20,21 @@
     }
 
     &--hoverMenu {
-        height: 35px;
-        width: 70px;
         position: absolute;
-        transform: translate(795px, -15px);
+        display: flex;
+        transform: translate(750px, -105px);
+        background-color: $secondary-1;
+        border: 1px $secondary-3 solid;
+        padding: 8px 12px;
+        &:hover {
+            border: 1px $primary-1 solid;
+        }
     }
+}
+
+.chatBubbleIcon svg {
+    margin-right: 12px;
+    fill:black
 }
 
 .assignmentPage {

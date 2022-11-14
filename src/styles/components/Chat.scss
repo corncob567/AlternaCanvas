@@ -2,7 +2,7 @@
     max-height: 75px;
     border: solid grey 3px;
     padding: 10px;
-
+    margin-bottom: 5px;
     img{
         width: 40px;
     }
@@ -10,7 +10,7 @@
 
 .chat-body {
     overflow-y: auto;
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     margin: 0em;
 }
@@ -45,9 +45,43 @@
 .chatColumn {
     width: 25%;
     height: 100%;
+    border-left: 5px solid black;
 }
 
 .chat-message-author {
     text-align: right;
     background-color: lightgrey;
+}
+
+.chatSelectItem--active{
+    background: rgba(182, 143, 255, 0.4); // Setting background rather than opacity to prevent text from being transparent
+}
+
+.chat-message {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+// .author-container {
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr;
+//     grid-template-columns: 1fr 6fr;
+// }
+
+.sender-container {
+    display: grid;
+    grid-template-rows: .5fr .5fr;
+    grid-template-columns: 1fr 6fr;
+    margin-bottom: 5px;
+}
+
+.pfp {
+    grid-row: span 2;
+}
+
+.chat-time {
+    font-size: 12px;
+    margin: 0;
+    text-align: right;
 }

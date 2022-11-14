@@ -17,7 +17,8 @@ const SingleGrade = (props) => {
         }
         else if (percentage > .69){
             return "C";
-        }else if (percentage > .59){
+        }
+        else if (percentage > .59){
             return "D";
         }
         else{
@@ -28,12 +29,13 @@ const SingleGrade = (props) => {
     const letterGrade = calcGrade();
     
     return (
-        <div className={`singleGradeWrapper`}>
-            <h3 className='announcementName'>{title}</h3>
-            <p>{date}</p>
-            <label>{letterGrade}</label>
-            <label>{earnedPoints} / {totalPoints}</label>
-        </div>
+        <tr class='rowStyle'>
+        <td>{title}</td>
+        <td>{date}</td>
+        <td>{earnedPoints} / {totalPoints}</td>
+        <td>{percentage * 100}%</td>
+        <td>{letterGrade}</td>
+        </tr>
     );
 };
 
