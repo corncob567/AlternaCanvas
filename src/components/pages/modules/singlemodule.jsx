@@ -4,6 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { MdFilePresent } from 'react-icons/md';
 import { MdAssignment } from 'react-icons/md';
 import { IoIosPaper } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const SingleModule = (props) => {
     const {title, downloads, pages, assignments, courseId} = props.moduleInfo;
@@ -33,7 +34,7 @@ const SingleModule = (props) => {
                         return (
                             <div key={index}>
                                 <span className='iconSpan'><MdAssignment />   </span>
-                                <a href={'/components/pages/assignments/' + courseId + '/' + assignment}>{assignment}</a>
+                                <Link to={"../assignments/" + assignment[0]} style={{ textDecoration: 'none', color: 'black' }}>{assignment[1]}</Link>
                             </div>
                         );
                     })}
