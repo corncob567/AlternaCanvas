@@ -5,19 +5,17 @@ import { Link } from 'react-router-dom';
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
-import {BsPersonCircle} from 'react-icons/bs';
-
+import { useLocation } from 'react-router-dom'
 
 function CourseSelector(props) {
 
     const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
     
-    const Course = ({ courseName, courseImg, courseColor }) => {
-
-        const [isCurrent, setCurrent] = useState(false);
-
+    const Course = ({ courseName, courseId }) => {
+        const location = useLocation();
+        console.log(location.pathname.split('/')[1] === activeCourse);
         return (
-            <div className='course'>
+            <div className={`course${courseId === activeCourse ? " course--active" : ""}`}>
                 {courseName}
             </div>
         )

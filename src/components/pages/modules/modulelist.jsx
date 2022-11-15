@@ -28,7 +28,7 @@ const modules = [
         title: "Let's get technical (week 4)",
         downloads: ['04-01-web-p1.pptx', '04-02-html-css.pptx', '04-03-css.pptx'],
         pages: [],
-        assignments: [],
+        assignments: [[1, 'Assignment 1']],
         courseId: "ui"
     },
     {
@@ -42,7 +42,7 @@ const modules = [
         title: "Graphic Design, Layout, Color (week 6)",
         downloads: ['06-01-design-principles-p1.pptx', '06-02-design-principles-p2.pptx', '06-03-design-principles-color.pptx'],
         pages: [],
-        assignments: [],
+        assignments: [[2, 'Assignment 2']],
         courseId: "ui"
     },
     {
@@ -183,9 +183,11 @@ const ModuleList = (props) => {
     return(
         <div className='moduleListWrapper'>
             {courseModules.map((module, index) => {
-                return (
-                    <SingleModule key={index} moduleInfo={module}/>
-                );
+                if(module.courseId === courseId){
+                    return (
+                        <SingleModule key={index} moduleInfo={module}/>
+                    );
+                }
             })}
         </div>
     );

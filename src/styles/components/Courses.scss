@@ -73,6 +73,11 @@ a:has(> .course){
     text-decoration: none;
     color: $primary-3;
 }
+
+a:has(> .course):hover{
+    color: $primary-2;
+}
+
 .course {
     width: 85px;
     height: 85px;
@@ -80,6 +85,10 @@ a:has(> .course){
     background-color: $secondary-2;
     text-align: center;
     font-weight: 600;
+    border-style: solid;
+    &--active {
+        color: $primary-2;
+    }
 }
 
 .addCourse {
