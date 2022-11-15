@@ -1,7 +1,7 @@
 @import "variables.scss";
 @import "components/Courses.scss";
 @import "components/Pages.scss";
-@import 'components/Assignments.scss';
+@import "components/Assignments.scss";
 @import "components/Chat.scss";
 @import "components/Syllabus.scss";
 @import "components/Announcements.scss";
@@ -11,6 +11,7 @@
 
 .baruvasLogo {
   margin: 24px 24px -12px 24px;
+  cursor: pointer;
 }
 
 .App {
@@ -38,54 +39,55 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .backArrow {
-    text-align: left;
-    width: 100%;
+  text-align: left;
+  width: 100%;
 
-    :hover {
-        cursor: pointer;
-        line, path {
-            stroke: $primary-1;
-        }
+  :hover {
+    cursor: pointer;
+    line,
+    path {
+      stroke: $primary-1;
     }
+  }
 }
 
 .button {
-    border-radius: 12px;
-    color: $secondary-1;
-    padding: 12px;
-    font-family: inherit;
-    margin: 0px 8px;
-    border-style: none;
+  border-radius: 12px;
+  color: $secondary-1;
+  padding: 12px;
+  font-family: inherit;
+  margin: 0px 8px;
+  border-style: none;
 
-    &:hover {
-        box-shadow: 0px 3px 6px 1px rgba($color: $primary-3, $alpha: .27);
-    }
+  &:hover {
+    box-shadow: 0px 3px 6px 1px rgba($color: $primary-3, $alpha: 0.27);
+  }
 
-    &.primary {
-        background-color: $primary-2;
-    }
+  &.primary {
+    background-color: $primary-2;
+  }
 
-    &.secondary {
-        background-color: $primary-3;
-    }
+  &.secondary {
+    background-color: $primary-3;
+  }
 
-    &.extension {
-        background-color: $primary-1;
-        padding: 12px 35px;
-    }
+  &.extension {
+    background-color: $primary-1;
+    padding: 12px 35px;
+  }
 
-    &.submitted {
-        background-color: $highlight;
-        padding: 12px 38px 12px 39px;
-    }
+  &.submitted {
+    background-color: $highlight;
+    padding: 12px 38px 12px 39px;
+  }
 
-    &.upload {
-        background-color: $primary-1;
-        margin-top: 18px;
-    }
+  &.upload {
+    background-color: $primary-1;
+    margin-top: 18px;
+  }
 }
