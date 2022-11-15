@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Syllabus from "./components/pages/syllabus/Syllabus";
-import Assignments from "./components/pages/assignments/Assignments";
+import Assignments from "./components/pages/assignments/assignments";
 import Modules from "./components/pages/modules/modules";
 import Announcements from "./components/pages/announcements/announcements";
 import Grades from "./components/pages/grades/grades";
-import AssignmentPage from "./components/pages/assignments/AssignmentsPage";
+import AssignmentPage from "./components/pages/assignments/assignmentsPage";
 import Zoom from "./components/pages/zoom/zoom";
 
 import "bootstrap/dist/css/bootstrap.css";
@@ -125,9 +125,9 @@ root.render(
           path="assignments"
           element={<Assignments courseId={"compg"} />}
         />
-        {courseInfo["compg"].assignments.map((assign) => {
+        {courseInfo["compg"].assignments.map((assign, index) => {
           return (
-            <Route exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
+            <Route key={index} exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
           );
         })}
         <Route path="modules" element={<Modules courseId={"compg"} />} />
@@ -141,9 +141,9 @@ root.render(
       <Route path="/ui" element={<App />}>
         <Route exact path="syllabus" element={<Syllabus courseId={"ui"} />} />
         <Route exact path="assignments" element={<Assignments courseId={"ui"} />}/>
-        {courseInfo["ui"].assignments.map((assign) => {
+        {courseInfo["ui"].assignments.map((assign, index) => {
           return (
-            <Route exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
+            <Route key={index} exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
           );
         })}
         <Route path="modules" element={<Modules courseId={"ui"} />} />
@@ -161,9 +161,9 @@ root.render(
           path="assignments"
           element={<Assignments courseId={"seniordesign"} />}
         />
-        {courseInfo["seniordesign"].assignments.map((assign) => {
+        {courseInfo["seniordesign"].assignments.map((assign, index) => {
           return (
-            <Route exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
+            <Route key={index} exact path={`assignments/${assign.id}`} element={<AssignmentPage assignmentID={assign.id} assignmentName={assign.name} dueDate={assign.dueDate} dueTime={assign.dueTime} submitted={assign.submitted} />}/>
           );
         })}
         <Route path="modules" element={<Modules courseId={"seniordesign"} />} />

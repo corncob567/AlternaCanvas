@@ -365,15 +365,6 @@ const grades = [
         user: "liz"
     },
     {
-        date: "11/10/22",
-        title: "Check-point 3",
-        earnedPoints: 19,
-        totalPoints: 20,
-        courseId: "seniordesign",
-        type: "assignment",
-        user: "liz"
-    },
-    {
         date: "11/6/22",
         title: "Progress Essay",
         earnedPoints: 99,
@@ -497,7 +488,7 @@ const grades = [
         totalPoints: 20,
         courseId: "seniordesign",
         type: "assignment",
-        user: "liz"
+        user: "daniel"
     },
     {
         date: "11/6/22",
@@ -506,7 +497,7 @@ const grades = [
         totalPoints: 100,
         courseId: "seniordesign",
         type: "project",
-        user: "liz"
+        user: "daniel"
     },
     {
         date: "11/10/22",
@@ -515,7 +506,7 @@ const grades = [
         totalPoints: 20,
         courseId: "seniordesign",
         type: "final",
-        user: "liz"
+        user: "daniel"
     },
 
 ];
