@@ -8,6 +8,10 @@
     padding: 24px 24px;
     border: 1px $secondary-3 solid;
     margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    
 
     h2, p {
         margin: 0;
@@ -20,9 +24,11 @@
     }
 
     &--hoverMenu {
-        position: absolute;
+        max-width: 90px;
+        max-height: 50px;
         display: flex;
-        transform: translate(750px, -105px);
+        position: relative;
+        bottom: 48px;
         background-color: $secondary-1;
         border: 1px $secondary-3 solid;
         padding: 8px 12px;

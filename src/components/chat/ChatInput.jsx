@@ -17,7 +17,7 @@ function ChatInput(props){
             // return messages
             let messagesCopy = JSON.parse(JSON.stringify(messages));
             let currentMessages = messagesCopy[props.user][props.currChatName].data.slice();
-            currentMessages.push( {'content': value, 'author': props.user});
+            currentMessages.push( {'content': value, 'author': props.user, 'time': Date.now()});
             messagesCopy[props.user][props.currChatName].data = currentMessages;
             return messagesCopy;
         })

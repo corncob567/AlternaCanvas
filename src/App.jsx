@@ -13,24 +13,24 @@ function App() {
 
   const [chatData, setChatData] = useState({
     "baru": {
-      "liz": {"data": [{"content":"baruuuuuuu", "author": "liz"}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz"}]},
-      "daniel": {"data": [{"content":"hey man whats up", "author": "baru"}, {"content":"nothin much barubasaur", "author": "daniel"}, {"content":"never call me that again", "author": "baru"}, {"content":"no", "author": "daniel"}]},
-      "alex": {"data": [{"content":"BARU WAKE UP!!", "author": "alex"}, {"content":"LEAVE ME ALONEEEEE", "author": "baru"}]},
+      "liz": {"data": [{"content":"baruuuuuuu", "author": "liz", 'time': Date.now()}, {"content":"never text me", "author": "baru", 'time': Date.now()}, {"content":"hehehe", "author": "liz", 'time': Date.now()}]},
+      "daniel": {"data": [{"content":"hey man whats up", "author": "baru", 'time': Date.now()}, {"content":"nothin much barubasaur", "author": "daniel", 'time': Date.now()}, {"content":"never call me that again", "author": "baru", 'time': Date.now()}, {"content":"no", "author": "daniel", 'time': Date.now()}]},
+      "alex": {"data": [{"content":"BARU WAKE UP!!", "author": "alex", 'time': Date.now()}, {"content":"LEAVE ME ALONEEEEE", "author": "baru", 'time': Date.now()}]},
     },
     "liz": {
-      "baru": {"data": [{"content":"baruuuuuuu", "author": "liz"}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz"}]},
-      "daniel": {"data": [{"content":"omw to the library now", "author": "liz"}, {"content":"Are you at Langsam?", "author": "daniel"}, {"content":"Yeah just got there", "author": "liz"}]},
-      "alex": {"data": [{"content":"hey lizzo", "author": "alex"}, {"content":"whats goin on chungus", "author": "liz"}, {"content":"are you slaying per usual", "author": "liz"}, {"content":"you know it", "author": "alex"}]},
+      "baru": {"data": [{"content":"baruuuuuuu", "author": "liz", 'time': Date.now()}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz", 'time': Date.now()}]},
+      "daniel": {"data": [{"content":"omw to the library now", "author": "liz", 'time': Date.now()}, {"content":"Are you at Langsam?", "author": "daniel", 'time': Date.now()}, {"content":"Yeah just got there", "author": "liz", 'time': Date.now()}]},
+      "alex": {"data": [{"content":"hey lizzo", "author": "alex", 'time': Date.now()}, {"content":"whats goin on chungus", "author": "liz", 'time': Date.now()}, {"content":"are you slaying per usual", "author": "liz", 'time': Date.now()}, {"content":"you know it", "author": "alex", 'time': Date.now()}]},
     },
     "daniel": {
-      "liz": {"data": [{"content":"omw to the library now", "author": "liz"}, {"content":"Are you at Langsam?", "author": "daniel"}, {"content":"Yeah just got there", "author": "liz"}]},
-      "baru": {"data": [{"content":"hey man whats up", "author": "baru"}, {"content":"nothin much barubasaur", "author": "daniel"}, {"content":"never call me that again", "author": "baru"}, {"content":"no", "author": "daniel"}]},
-      "alex": {"data": [{"content":"hey alex how's it goin?", "author": "daniel"}, {"content":"terrible", "author": "alex"}, {"content":"same fr", "author": "daniel"}, {"content":"i feel like a ghost", "author": "alex"}, {"content":"honestly, same", "author": "daniel"}]},
+      "liz": {"data": [{"content":"omw to the library now", "author": "liz", 'time': Date.now()}, {"content":"Are you at Langsam?", "author": "daniel", 'time': Date.now()}, {"content":"Yeah just got there", "author": "liz", 'time': Date.now()}]},
+      "baru": {"data": [{"content":"hey man whats up", "author": "baru", 'time': Date.now()}, {"content":"nothin much barubasaur", "author": "daniel", 'time': Date.now()}, {"content":"never call me that again", "author": "baru", 'time': Date.now()}, {"content":"no", "author": "daniel", 'time': Date.now()}]},
+      "alex": {"data": [{"content":"hey alex how's it goin?", "author": "daniel", 'time': Date.now()}, {"content":"terrible", "author": "alex", 'time': Date.now()}, {"content":"same fr", "author": "daniel", 'time': Date.now()}, {"content":"i feel like a ghost", "author": "alex", 'time': Date.now()}, {"content":"honestly, same", "author": "daniel", 'time': Date.now()}]},
     },
     "alex": {
-      "liz": {"data": [{"content":"hey lizzo", "author": "alex"}, {"content":"whats goin on chungus", "author": "liz"}, {"content":"are you slaying per usual", "author": "liz"}, {"content":"you know it", "author": "alex"}]},
-      "daniel": {"data": [{"content":"hey alex how's it goin?", "author": "daniel"}, {"content":"terrible", "author": "alex"}, {"content":"same fr", "author": "daniel"}, {"content":"i feel like a ghost", "author": "alex"}, {"content":"honestly, same", "author": "daniel"}]},
-      "baru": {"data": [{"content":"BARU WAKE UP!!", "author": "alex"}, {"content":"LEAVE ME ALONEEEEE", "author": "baru"}]},
+      "liz": {"data": [{"content":"hey lizzo", "author": "alex", 'time': Date.now()}, {"content":"whats goin on chungus", "author": "liz", 'time': Date.now()}, {"content":"are you slaying per usual", "author": "liz", 'time': Date.now()}, {"content":"you know it", "author": "alex", 'time': Date.now()}]},
+      "daniel": {"data": [{"content":"hey alex how's it goin?", "author": "daniel", 'time': Date.now()}, {"content":"terrible", "author": "alex", 'time': Date.now()}, {"content":"same fr", "author": "daniel", 'time': Date.now()}, {"content":"i feel like a ghost", "author": "alex", 'time': Date.now()}, {"content":"honestly, same", "author": "daniel", 'time': Date.now()}]},
+      "baru": {"data": [{"content":"BARU WAKE UP!!", "author": "alex", 'time': Date.now()}, {"content":"LEAVE ME ALONEEEEE", "author": "baru", 'time': Date.now()}]},
     }
   })
 
