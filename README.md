@@ -1,6 +1,7 @@
 # AlternaCanvas
 Project 2 for CS6067\
-Team: Baru's Kids
+Team: Baru's Kids\
+Run this project using Node Version 14 or 16.
 
 # Getting Started with Create React App
 
