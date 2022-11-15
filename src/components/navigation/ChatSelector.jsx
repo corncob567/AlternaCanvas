@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/main.scss';
 import ChatSelect from './ChatSelect';
+import {FiMessageSquare} from 'react-icons/fi';
 
 const ChatSelector = (props) => {
     const chats = props.chats;
@@ -10,8 +11,8 @@ const ChatSelector = (props) => {
 
     return (
         <ul className='courseNav--chats'>
-            <li class='chatNavTitle'>
-                Chats
+            <li className='chatNavTitle'>
+                Chats <FiMessageSquare></FiMessageSquare>
             </li>
             {chats.map((chat, index) => {
                 if (chat === user){
