@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../../styles/main.scss";
-import BackArrow from "../../../assets/backArrow";
+import BackArrow from "../../../assets/BackArrow";
+import { useNavigate } from "react-router-dom";
 
 const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
   const [requestExtension, setRequestExtension] = useState(false);
@@ -17,10 +18,11 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
         setRenderSubmit(true);
     }
   }
+  const navigate = useNavigate();
 
   return (
     <div className="assignmentPage">
-        <div className="backArrow">
+        <div className="backArrow" onClick={() => navigate(-1)}>
             <BackArrow/>
         </div>
         <div className="assignmentPage--header">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../styles/main.scss';
 import { Link } from 'react-router-dom';
 
@@ -10,34 +10,33 @@ import { useLocation } from 'react-router-dom'
 function CourseSelector(props) {
 
     const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
-    
+
     const Course = ({ courseName, courseId }) => {
         const location = useLocation();
         console.log(location.pathname.split('/')[1] === activeCourse);
         return (
-            <div className={`course${courseId === activeCourse ? " course--active" : ""}`}>
+            <div className={`courseSelector--course ${courseId === activeCourse ? "active" : ""}`}>
                 {courseName}
             </div>
         )
     }
+    console.log(activeCourse)
     
     return (
         <>
         <div className='courseSelector'>
             <BaruvasLogo setUser={props.setUser} setCurrChatName={props.setCurrChatName} user={props.user}/>
             <div className='courseSelector--courses'>
-                <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')}>
+                <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')} style={{ textDecoration: 'none' }}>
                     <Course 
-                        className={activeCourse === 'ui' ? 'courseSelector--course active' : 'courseSelector--course'}
                         courseId='ui' 
                         courseName={courseInfo['ui'].courseName}
                         courseProfessor={courseInfo['ui'].courseProfessor}
                         courseImg={`../../assets/${courseInfo['ui'].courseImg}`}
                     />
                 </Link>
-                <Link to='/compg/syllabus' onClick={() => setActiveCourse('compg')}>
+                <Link to='/compg/syllabus' onClick={() => setActiveCourse('compg')} style={{ textDecoration: 'none' }}>
                     <Course 
-                        className={activeCourse === 'compg' ? 'courseSelector--course active' : 'courseSelector--course'}
                         courseId='compg' 
                         courseName={courseInfo['compg'].courseName}
                         courseProfessor={courseInfo['compg'].courseProfessor}
