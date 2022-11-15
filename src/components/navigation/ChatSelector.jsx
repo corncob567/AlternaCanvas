@@ -14,7 +14,7 @@ const ChatSelector = (props) => {
                 if (chat === user){
                     return null;
                 }
-                return (<ChatSelect key={index} currChatName={currChatName} chatName={chat} setCurrChatName={setCurrChatName}></ChatSelect>);
+                return (<ChatSelect key={index} currChatName={currChatName} chatName={chat.startsWith('assn-') ? chat.substring(5) : chat} setCurrChatName={setCurrChatName}></ChatSelect>);
             })}
         </ul>
     );

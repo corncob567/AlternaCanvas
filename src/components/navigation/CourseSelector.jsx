@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../styles/main.scss';
 import { Link } from 'react-router-dom';
 
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
-
+import { useLocation } from 'react-router-dom'
 
 function CourseSelector(props) {
 
     const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
-    
-    const Course = ({ courseName, isActive }) => {
 
+    const Course = ({ courseName, courseId }) => {
+        const location = useLocation();
+        console.log(location.pathname.split('/')[1] === activeCourse);
         return (
-            <div className={isActive ? 'courseSelector--course active' : 'courseSelector--course'}>
+            <div className={`courseSelector--course ${courseId === activeCourse ? "active" : ""}`}>
                 {courseName}
             </div>
         )
@@ -32,7 +33,6 @@ function CourseSelector(props) {
                         courseName={courseInfo['ui'].courseName}
                         courseProfessor={courseInfo['ui'].courseProfessor}
                         courseImg={`../../assets/${courseInfo['ui'].courseImg}`}
-                        isActive={activeCourse === 'ui'}
                     />
                 </Link>
                 <Link to='/compg/syllabus' onClick={() => setActiveCourse('compg')} style={{ textDecoration: 'none' }}>
@@ -41,7 +41,6 @@ function CourseSelector(props) {
                         courseName={courseInfo['compg'].courseName}
                         courseProfessor={courseInfo['compg'].courseProfessor}
                         courseImg={`../../assets/${courseInfo['compg'].courseImg}`} 
-                        isActive={activeCourse === 'compg'}
                     />
                 </Link>
                 <AddCourse/>
