@@ -10,7 +10,7 @@ const ChatSelector = (props) => {
 
     return (
         <ul className='courseNav--chats'>
-            <li class='chatNavTitle'>
+            <li className='chatNavTitle'>
                 Chats
             </li>
             {chats.map((chat, index) => {

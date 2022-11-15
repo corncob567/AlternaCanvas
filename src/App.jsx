@@ -1,6 +1,6 @@
 import "./styles/main.scss";
 import { Outlet } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import CourseSelector from "./components/navigation/CourseSelector";
 import ChatWindow from "./components/chat/ChatWindow";
 
@@ -64,7 +64,7 @@ function App() {
     seniordesign: {
       courseName: "Senior Design",
       courseProfessor: "Dr. Professor",
-      courseImg: "uiux.png",
+      courseImg: "coding.png",
       assignments: [{
         id: 1,
         name: "Proposal and Groups",
@@ -125,7 +125,8 @@ function App() {
     }
   })
 
-  let [currChatName, setCurrChatName] = useState("liz");
+  let [currChatName, setCurrChatName] = useState("liz");    
+  const [renderSD, setSD] = useState(false);
 
   let [user, setUser] = useState("baru");
 
@@ -141,6 +142,8 @@ function App() {
           setCurrChatName={setCurrChatName}
           user={user}
           setUser={setUser}
+          renderSD={renderSD}
+          setSD={setSD}
         />
       </div>
       <div className="pageOutletWrapper">

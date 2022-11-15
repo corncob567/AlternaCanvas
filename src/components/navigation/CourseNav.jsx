@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import ChatSelector from './ChatSelector';
 import uiux from '../../assets/uiux.png';
 import compgraphics from '../../assets/compgraphics.png';
+import coding from '../../assets/coding.png';
 
 function CourseNav({courseID, courseName, courseImg, courseProfessor, currChatName, chats, setCurrChatName, user}) {
     let dynamicCourseImg;
@@ -13,6 +14,9 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, currChatNa
         break;
         case '../../assets/compgraphics.png':
             dynamicCourseImg = <img src={compgraphics} alt={courseName} className="courseNav--img"/>;
+        break;
+        case '../../assets/coding.png':
+            dynamicCourseImg = <img src={coding} alt={courseName} className="courseNav--img"/>;
         break;
         default:
             dynamicCourseImg = <img src={''} alt={courseName} className="courseNav--img"/>;
@@ -46,7 +50,6 @@ function CourseNav({courseID, courseName, courseImg, courseProfessor, currChatNa
                     <li>
                         <NavLink to='zoom' className={e => (e.isActive ? 'courseNav--item active' : 'courseNav--item')}>Zoom</NavLink>
                     </li>
-                    {/* <br></br> */}
                     <hr className="courseNav--line"></hr>
                 </ul>
                 <ChatSelector chats={chats} setCurrChatName={setCurrChatName} currChatName={currChatName} user={user}/>
