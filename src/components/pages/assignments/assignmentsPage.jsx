@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../../styles/main.scss";
-import BackArrow from "../../../assets/BackArrow";
+import BackArrow from "../../../assets/backArrow";
 
 const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
   const [requestExtension, setRequestExtension] = useState(false);

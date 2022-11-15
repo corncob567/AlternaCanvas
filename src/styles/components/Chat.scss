@@ -74,6 +74,9 @@
 .chat-message-author {
     text-align: right;
     background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-right: 5px;
 }
 
 .chatSelectItem--active{
@@ -86,11 +89,10 @@
     padding-left: 5px;
 }
 
-// .author-container {
-//     display: grid;
-//     grid-template-rows: 1fr 1fr 1fr;
-//     grid-template-columns: 1fr 6fr;
-// }
+.author-container {
+    display: grid;
+    grid-template-rows: 1fr
+}
 
 .sender-container {
     display: grid;

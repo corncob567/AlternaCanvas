@@ -3,7 +3,7 @@ import '../../../styles/main.scss';
 import ChatBubble from '../../../assets/ChatBubble';
 import NotifBell from '../../../assets/NotifBell';
 
-const Assignment = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
+const Assignment = ({ assignmentID, assignmentName, dueDate, dueTime, setChatData, user}) => {
     const [isHover, setHover] = useState(false)
 
     return (
@@ -14,7 +14,7 @@ const Assignment = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
             {isHover ? 
                 <div className='assignment--hoverMenu'>
                     <div className='chatBubbleIcon'>
-                        <ChatBubble/>
+                        <ChatBubble setChatData={setChatData} user={user} assignmentName={assignmentName}/>
                     </div>
                     <NotifBell/>
                 </div> 
