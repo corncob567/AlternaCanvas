@@ -20,7 +20,6 @@ function CourseSelector(props) {
             </div>
         )
     }
-    console.log(activeCourse)
     
     return (
         <>

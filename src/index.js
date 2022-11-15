@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Syllabus from './components/pages/syllabus/Syllabus';
-import Assignments from './components/pages/assignments/assignments';
+import Assignments from './components/pages/assignments/Assignments';
 import Modules from './components/pages/modules/modules';
 import Announcements from './components/pages/announcements/announcements';
 import Grades from './components/pages/grades/grades';
-import AssignmentPage from './components/pages/assignments/assignmentsPage';
+import AssignmentPage from './components/pages/assignments/AssignmentsPage';
 import Zoom from './components/pages/zoom/zoom';
 
 import 'bootstrap/dist/css/bootstrap.css';
