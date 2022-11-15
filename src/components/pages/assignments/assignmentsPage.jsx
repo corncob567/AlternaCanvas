@@ -3,9 +3,9 @@ import "../../../styles/main.scss";
 import BackArrow from "../../../assets/BackArrow";
 import { useNavigate } from "react-router-dom";
 
-const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
+const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime, submitted }) => {
   const [requestExtension, setRequestExtension] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(submitted);
   const [uploadType, setUploadType] = useState('file');
   const [renderSubmit, setRenderSubmit] = useState(false);
 
@@ -33,7 +33,7 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
             {dueDate} @ {dueTime}
             </p>
             <div className="assignmentPage--buttonWrapper">
-            {submitted ? '' : 
+            {isSubmitted ? '' : 
                 <>
                     <button className="button secondary">Download Files</button>
                     <button
@@ -44,10 +44,10 @@ const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime }) => {
                     </button>
                 </>}
             <button
-                className={`button ${submitted ? "submitted" : "primary"}`}
+                className={`button ${isSubmitted ? "submitted" : "primary"}`}
                 onClick={() => clickSubmit()}
             >
-                {submitted ? "Submitted!" : "Submit Assignment"}
+                {isSubmitted ? "Submitted!" : "Submit Assignment"}
             </button>
             </div>
         </div>
