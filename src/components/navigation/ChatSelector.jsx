@@ -10,6 +10,9 @@ const ChatSelector = (props) => {
 
     return (
         <ul className='courseNav--chats'>
+            <li class='chatNavTitle'>
+                Chats
+            </li>
             {chats.map((chat, index) => {
                 if (chat === user){
                     return null;

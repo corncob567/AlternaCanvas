@@ -1,102 +1,114 @@
-.courseNav{
-    border-right: 5px $primary-3 solid;
-    border-left: 5px $primary-3 solid;
-    background-color: $secondary-2;
-    width: 215px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+.courseNav {
+  border-right: 5px $primary-3 solid;
+  border-left: 5px $primary-3 solid;
+  background-color: $secondary-2;
+  width: 215px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-    &--pages {
-        text-align: center;
-
-        li {
-            padding: 6px 0px;
-        }
-    }
-
-    &--course-info {
-        text-align: center;
-        padding: 12px 16px 0px 16px;
-    }
-
-    &--img {
-        width: 140px;
-        height: 85px;
-        padding-bottom: 12px;
-    }
-
-    &--courseTitle {
-        font-weight: 600;
-        margin: 0;
-    }
-
-    // &--item {
-    //     &:hover {
-    //         color: 
-    //     }
-    // }
-
-    &--courseProfessor {
-        margin: 0;
-        padding: 0;
-    }
-
-    &--line {
-        margin: 12px 16px 12px 16px;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    &--tabs {
-        text-align: center;
-        height: 100vh;
-        overflow: auto; /* Enable scrolling if the sidenav has too much content */
-        li {
-            padding: 6px 0px;
-        }
-    }
-    
-    a, p {
-        text-decoration: none;
-        text-align: center;
-        padding: 10px;
-        font-size: 20px;
-        color: inherit;
-    }
-}
-
-a:has(> .course){
-    text-decoration: none;
-    color: $primary-3;
-}
-.course {
-    width: 85px;
-    height: 85px;
-    margin: 24px;
-    background-color: $secondary-2;
+  &--pages {
     text-align: center;
+
+    li {
+      padding: 6px 0px;
+    }
+
+    a:not(.active):hover {
+      color: $primary-2;
+    }
+    a.active:hover {
+      color: inherit;
+    }
+  }
+
+  &--course-info {
+    text-align: center;
+    padding: 12px 16px 0px 16px;
+  }
+
+  &--img {
+    width: 140px;
+    height: 85px;
+    padding-bottom: 12px;
+  }
+
+  &--courseTitle {
     font-weight: 600;
+    margin: 0;
+  }
+
+  &--courseProfessor {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--line {
+    margin: 12px 16px 12px 16px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--tabs {
+    text-align: center;
+    height: 100vh;
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    li {
+      padding: 6px 0px;
+    }
+  }
+
+  a,
+  p {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: inherit;
+  }
 }
 
 .addCourse {
-    margin: 0px 24px;
+  margin: 0px 24px;
 }
 
 .courseSelector {
-    &--container {
-        display: flex;
-        height: 100vh;
+  &--container {
+    display: flex;
+    height: 100vh;
+  }
+
+  &--courses {
+    overflow: hidden;
+    max-height: 85vh;
+  }
+
+  &--course {
+    width: 85px;
+    height: 85px;
+    margin: 24px;
+    text-align: center;
+    color: $primary-3;
+    background-color: $secondary-2;
+
+    &:hover {
+      border: 3px $primary-2 solid;
     }
-    &--courses {
-        overflow: hidden;
-        max-height: 85vh;
+
+    &.active {
+      border: 3px $primary-1 solid;
     }
+  }
 }
 
-li:has(> .courseNav--item.active){
-    background: rgba(182, 143, 255, 0.4); // Setting background rather than opacity to prevent text from being transparent
+.chatNavTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+li:has(> .courseNav--item.active) {
+  font-weight: 700;
 }

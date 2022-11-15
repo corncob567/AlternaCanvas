@@ -1,15 +1,106 @@
-import './styles/main.scss';
-import { Outlet } from 'react-router-dom';
-import React, { useState }  from 'react';
-import CourseSelector from './components/navigation/CourseSelector';
-import ChatWindow from './components/chat/ChatWindow'
+import "./styles/main.scss";
+import { Outlet } from "react-router-dom";
+import React, { useState } from "react";
+import CourseSelector from "./components/navigation/CourseSelector";
+import ChatWindow from "./components/chat/ChatWindow";
 
 function App() {
-
-  const [activeCourse, setActiveCourse] = useState('compg');
-  const [courseInfo, setCourseInfo] = 
-    useState({'compg': {courseName: 'Computer Graphics', courseProfessor: 'Dr. Bingus', courseImg: 'compgraphics.png'}, 
-              'ui': {courseName: 'User Interface Design', courseProfessor: 'Dr. Aurisano', courseImg: 'uiux.png'}});
+  const [activeCourse, setActiveCourse] = useState("compg");
+  const [courseInfo, setCourseInfo] = useState({
+    compg: {
+      courseName: "Computer Graphics",
+      courseProfessor: "Dr. Bingus",
+      courseImg: "compgraphics.png",
+      assignments: [{
+        id: 1,
+        name: "Assignment 1",
+        dueDate: "November 14",
+        dueTime: "11:59PM",
+        submitted: false
+      },{
+        id: 2,
+        name: "Assignment 2",
+        dueDate: "November 21",
+        dueTime: "11:59PM",
+        submitted: false
+      },{
+        id: 3,
+        name: "Assignment 3",
+        dueDate: "November 29",
+        dueTime: "11:59PM",
+        submitted: false
+      }
+    ]},
+    ui: {
+      courseName: "User Interface Design",
+      courseProfessor: "Dr. Aurisano",
+      courseImg: "uiux.png",
+      assignments: [{
+        id: 1,
+        name: "React Tutorial",
+        dueDate: "November 1",
+        dueTime: "1:30PM",
+        submitted: true
+      },{
+        id: 2,
+        name: "React Webpage 1",
+        dueDate: "November 12",
+        dueTime: "2:30PM",
+        submitted: true
+      },{
+        id: 3,
+        name: "React Webpage 2",
+        dueDate: "November 17",
+        dueTime: "2:30PM",
+        submitted: false
+      },{
+        id: 4,
+        name: "React Final Project",
+        dueDate: "November 28",
+        dueTime: "11:59PM",
+        submitted: false
+      }
+    ]},
+    seniordesign: {
+      courseName: "Senior Design",
+      courseProfessor: "Dr. Professor",
+      courseImg: "uiux.png",
+      assignments: [{
+        id: 1,
+        name: "Proposal and Groups",
+        dueDate: "September 3",
+        dueTime: "11:59PM",
+        submitted: true
+      },{
+        id: 2,
+        name: "Concept Designs",
+        dueDate: "October 3",
+        dueTime: "11:59PM",
+        submitted: true
+      },{
+        id: 3,
+        name: "Prototype A",
+        dueDate: "October 24",
+        dueTime: "11:59PM",
+        submitted: true
+      },{
+        name: "Advisor Review",
+        dueDate: "October 31",
+        dueTime: "11:59PM",
+        submitted: true
+      },{
+        name: "User Interviews",
+        dueDate: "November 13",
+        dueTime: "11:59PM",
+        submitted: true
+      },{
+        name: "Prototype B",
+        dueDate: "December 2",
+        dueTime: "11:59PM",
+        submitted: false
+      }
+    ]},
+  });
 
   const [chatData, setChatData] = useState({
     "baru": {
@@ -34,23 +125,37 @@ function App() {
     }
   })
 
-  let [currChatName, setCurrChatName] = useState('liz');
+  let [currChatName, setCurrChatName] = useState("liz");
 
-  let [user, setUser] = useState('baru');
+  let [user, setUser] = useState("baru");
 
   return (
-      <div className='App'>
-          <div className='courseSelector--container'>
-            <CourseSelector currChatName={currChatName} activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData[user])} setCurrChatName={setCurrChatName} user={user} setUser={setUser}/>
-          </div>
-          <div className='pageOutletWrapper'>
-            <Outlet context={[user, setChatData]}/>
-          </div>
-          <div className='chatColumn'>
-            <ChatWindow currChatData={chatData[user][currChatName]} currChatName={currChatName} setChatData={setChatData} user={user}/>
-          </div>
+    <div className="App">
+      <div className="courseSelector--container">
+        <CourseSelector
+          currChatName={currChatName}
+          activeCourse={activeCourse}
+          setActiveCourse={setActiveCourse}
+          courseInfo={courseInfo}
+          chats={Object.keys(chatData)}
+          setCurrChatName={setCurrChatName}
+          user={user}
+          setUser={setUser}
+        />
       </div>
+      <div className="pageOutletWrapper">
+        <Outlet context={[user, courseInfo]} />
+      </div>
+      <div className="chatColumn">
+        <ChatWindow
+          currChatData={chatData[user][currChatName]}
+          currChatName={currChatName}
+          setChatData={setChatData}
+          user={user}
+        />
+      </div>
+    </div>
   );
-} 
+}
 
 export default App;
