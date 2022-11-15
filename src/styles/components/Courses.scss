@@ -13,6 +13,13 @@
         li {
             padding: 6px 0px;
         }
+
+        a:not(.active):hover{
+            color: $primary-2;
+        }
+        a.active:hover {
+            color: inherit;
+        }
     }
 
     &--course-info {
