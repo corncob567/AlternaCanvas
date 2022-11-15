@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Form from 'react-bootstrap/Form';
-
+import { getDisplayName } from '../components/navigation/ChatSelect';
 
 const BaruvasToggle = React.forwardRef(({ onClick }, ref) => (
 
@@ -85,12 +84,12 @@ function BaruvasLogo(props){
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu}>
-        <Dropdown.Item eventKey="baru" active={props.user === 'baru'}>baru</Dropdown.Item>
-        <Dropdown.Item eventKey="liz" active={props.user === 'liz'}>liz</Dropdown.Item>
+        <Dropdown.Item eventKey="baru" active={props.user === 'baru'}>{getDisplayName('baru')}</Dropdown.Item>
+        <Dropdown.Item eventKey="liz" active={props.user === 'liz'}>{getDisplayName('liz')}</Dropdown.Item>
         <Dropdown.Item eventKey="daniel" active={props.user === 'daniel'}>
-          daniel
+        {getDisplayName('daniel')}
         </Dropdown.Item>
-        <Dropdown.Item eventKey="alex" active={props.user === 'alex'}>alex</Dropdown.Item>
+        <Dropdown.Item eventKey="alex" active={props.user === 'alex'}>{getDisplayName('alex')}</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   )

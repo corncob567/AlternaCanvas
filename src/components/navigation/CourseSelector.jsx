@@ -1,19 +1,15 @@
 import React from 'react';
 import '../../styles/main.scss';
 import { Link } from 'react-router-dom';
-
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
-import { useLocation } from 'react-router-dom'
 
 function CourseSelector(props) {
 
     const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
 
     const Course = ({ courseName, courseId }) => {
-        const location = useLocation();
-        console.log(location.pathname.split('/')[1] === activeCourse);
         return (
             <div className={`courseSelector--course ${courseId === activeCourse ? "active" : ""}`}>
                 {courseName}

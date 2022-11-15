@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleGrade from './singlegrade.jsx';
 import '../../../styles/main.scss';
+import { getDisplayName } from '../../navigation/ChatSelect';
 
 const grades = [
     {
@@ -587,20 +588,7 @@ const GradeList = (props) => {
     let totalGrade = parseInt((assignmentPercent * assignment) + (participationPercent * participation) + (projectPercent * project) + (finalExamPercent * final));
 
     // set display student name:
-    let fullName = "";
-    if (user === "alex")
-    {
-        fullName = "Alex Mills"
-    }
-    else if(user === "daniel"){
-        fullName = "Daniel Hackney"
-    }
-    else if(user === "liz"){
-        fullName = "Liz Tremblay"
-    }
-    else if(user === "baru"){
-        fullName = "Baru Yogesh"
-    }
+    let fullName = getDisplayName(user);
 
     return(
         <div>
