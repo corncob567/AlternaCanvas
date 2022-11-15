@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfilePicture from './ProfilePicture';
-
-import '../../styles/components/Chat.scss'
+import '../../styles/main.scss'
 
 function ChatMessage(props) {
     if (props.author === props.user){
