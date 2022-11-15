@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../../styles/main.scss";
 import { MdAssignment } from "react-icons/md";
-import Assignment from "./Assignment";
+import Assignment from "./assignment";
 import { useOutletContext } from "react-router";
 
 const Assignments = props => {
@@ -18,9 +18,10 @@ const Assignments = props => {
         Assignments <MdAssignment />
       </h1>
       <div className="assignments--assignmentList">
-        {courseInfo[currentCourse].assignments.map(assign => {
+        {courseInfo[currentCourse].assignments.map((assign, index) => {
           return (
             <Link
+              key={index}
               to={`${assign.id}`}
               style={{ textDecoration: "none", color: "black" }}
             >

@@ -33,7 +33,7 @@ function ChatButtons(props) {
 
 function ChatHeader(props) {
     return (
-        <div className='chat-header' fluid>
+        <div className='chat-header'>
             <ProfilePicture url={props.url} maxHeight={50}></ProfilePicture>
             <p className='chatName'>{props.name.startsWith('assn-') ? props.name.substring(5) : getDisplayName(props.name)}</p>
             <ChatButtons name={props.name} currChatData={props.currChatData}></ChatButtons>
