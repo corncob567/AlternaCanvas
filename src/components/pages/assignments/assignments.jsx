@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../../styles/main.scss";
 import { MdAssignment } from "react-icons/md";
-import Assignment from "./assignment";
+import Assignment from "./Assignment";
 import { useOutletContext } from "react-router";
 
 const Assignments = props => {

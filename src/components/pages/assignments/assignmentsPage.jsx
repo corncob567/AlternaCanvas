@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../../styles/main.scss";
-import BackArrow from "../../../assets/backArrow";
-import AttachFile from "../../../assets/attachFile";
+import BackArrow from "../../../assets/BackArrow";
+import AttachFile from "../../../assets/AttachFile";
 import { useNavigate } from "react-router-dom";
 
 const AssignmentPage = ({ assignmentID, assignmentName, dueDate, dueTime, submitted }) => {
