@@ -2,12 +2,12 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../../styles/main.scss";
 import { MdAssignment } from "react-icons/md";
-import Assignment from "./Assignment";
+import Assignment from "./assignment";
 import { useOutletContext } from "react-router";
 
 const Assignments = props => {
   const courseId = props.courseId;
-  const [user, courseInfo] = useOutletContext();
+  const [user, courseInfo, setChatData] = useOutletContext();
 
   const location = useLocation();
   const currentCourse = location.pathname.split("/")[1];
@@ -29,7 +29,7 @@ const Assignments = props => {
                 assignmentName={assign.name}
                 dueDate={assign.dueDate}
                 dueTime={assign.dueTime}
-                setChatData={props.setChatData}
+                setChatData={setChatData}
                 user={user}
               />
             </Link>
