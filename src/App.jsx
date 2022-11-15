@@ -41,10 +41,10 @@ function App() {
   return (
       <div className='App'>
           <div className='courseSelector--container'>
-            <CourseSelector currChatName={currChatName} activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData)} setCurrChatName={setCurrChatName} user={user} setUser={setUser}/>
+            <CourseSelector currChatName={currChatName} activeCourse={activeCourse} setActiveCourse={setActiveCourse} courseInfo={courseInfo} chats={Object.keys(chatData[user])} setCurrChatName={setCurrChatName} user={user} setUser={setUser}/>
           </div>
           <div className='pageOutletWrapper'>
-            <Outlet context={[user]}/>
+            <Outlet context={[user, setChatData]}/>
           </div>
           <div className='chatColumn'>
             <ChatWindow currChatData={chatData[user][currChatName]} currChatName={currChatName} setChatData={setChatData} user={user}/>

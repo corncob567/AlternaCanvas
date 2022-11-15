@@ -1,9 +1,10 @@
 import React from 'react';
-
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react';
+import '../../styles/main.scss';
+
 
 function ChatInput(props){
 
@@ -29,7 +30,7 @@ function ChatInput(props){
     }};
 
     return (
-        <InputGroup>
+        <InputGroup className='chatInputGroup'>
             <Form.Control aria-label="With textarea" onChange={onInput} value={value || ''} onKeyDownCapture={handleKeyPress}/>   
             <Button type='submit' variant="outline-secondary" onClick={handleClick}>Send</Button>
         </InputGroup>

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import ChatMessage from './ChatMessage';
-
-import '../../styles/components/Chat.scss'
+import '../../styles/main.scss'
 
 function ChatBody(props) {
     return (

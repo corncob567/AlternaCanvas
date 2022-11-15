@@ -11,9 +11,9 @@
         height: 40px;
     }
     .chatName{
-        margin-left: 15px;
-        margin-right: auto;
+        margin: auto auto auto 15px;
         font-weight: 600;
+        font-size: 24px;
     }
 }
 
@@ -53,8 +53,18 @@
 
 .chatColumn {
     width: 25%;
-    height: 100%;
+    height: 100vh;
     border-left: 5px solid black;
+}
+
+.chatInputGroup{
+    input{
+        border: 3px solid $primary-2;
+    }
+    button{
+        border: 3px solid $primary-2;
+        border-left: none;
+    }
 }
 
 .chat-message{
@@ -64,6 +74,9 @@
 .chat-message-author {
     text-align: right;
     background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-right: 5px;
 }
 
 .chatSelectItem--active{
@@ -76,11 +89,10 @@
     padding-left: 5px;
 }
 
-// .author-container {
-//     display: grid;
-//     grid-template-rows: 1fr 1fr 1fr;
-//     grid-template-columns: 1fr 6fr;
-// }
+.author-container {
+    display: grid;
+    grid-template-rows: 1fr
+}
 
 .sender-container {
     display: grid;
