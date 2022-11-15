@@ -90,16 +90,19 @@ const courseInfo = ({
       dueTime: "11:59PM",
       submitted: true
     },{
+      id: 4,
       name: "Advisor Review",
       dueDate: "October 31",
       dueTime: "11:59PM",
       submitted: true
     },{
+      id: 5,
       name: "User Interviews",
       dueDate: "November 13",
       dueTime: "11:59PM",
       submitted: true
     },{
+      id: 6,
       name: "Prototype B",
       dueDate: "December 2",
       dueTime: "11:59PM",

@@ -138,7 +138,7 @@ function App() {
           activeCourse={activeCourse}
           setActiveCourse={setActiveCourse}
           courseInfo={courseInfo}
-          chats={Object.keys(chatData)}
+          chats={Object.keys(chatData[user])}
           setCurrChatName={setCurrChatName}
           user={user}
           setUser={setUser}
@@ -147,7 +147,7 @@ function App() {
         />
       </div>
       <div className="pageOutletWrapper">
-        <Outlet context={[user, courseInfo]} />
+        <Outlet context={[user, courseInfo, setChatData]} />
       </div>
       <div className="chatColumn">
         <ChatWindow

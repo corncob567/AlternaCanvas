@@ -1,13 +1,11 @@
 import React, { useState, useRef } from 'react';
 import '../../styles/main.scss';
 import { Link } from 'react-router-dom';
-
 import AddCourse from '../../assets/AddCourse';
 import Close from '../../assets/Close';
 import OutsideClick from '../../assets/customHooks/OutsideClick';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
-import { useLocation } from 'react-router-dom'
 
 function CourseSelector(props) {
 
@@ -41,8 +39,6 @@ function CourseSelector(props) {
     }
 
     const Course = ({ courseName, courseId }) => {
-        const location = useLocation();
-        console.log(location.pathname.split('/')[1] === activeCourse);
         return (
             <div className={`courseSelector--course ${courseId === activeCourse ? "active" : ""}`}>
                 {courseName}
