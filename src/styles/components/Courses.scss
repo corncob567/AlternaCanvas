@@ -31,12 +31,6 @@
         margin: 0;
     }
 
-    // &--item {
-    //     &:hover {
-    //         color: 
-    //     }
-    // }
-
     &--courseProfessor {
         margin: 0;
         padding: 0;
@@ -69,19 +63,6 @@
     }
 }
 
-a:has(> .course){
-    text-decoration: none;
-    color: $primary-3;
-}
-.course {
-    width: 85px;
-    height: 85px;
-    margin: 24px;
-    background-color: $secondary-2;
-    text-align: center;
-    font-weight: 600;
-}
-
 .addCourse {
     margin: 0px 24px;
 }
@@ -91,12 +72,30 @@ a:has(> .course){
         display: flex;
         height: 100vh;
     }
+
     &--courses {
         overflow: hidden;
         max-height: 85vh;
     }
+
+    &--course {
+        width: 85px;
+        height: 85px;
+        margin: 24px;
+        text-align: center;
+        color: $primary-3;
+        background-color: $secondary-2;
+
+        &:hover {
+            border: 3px $primary-2 solid;
+        }
+
+        &.active {
+            border: 3px $primary-1 solid;
+        }
+    }
 }
 
 li:has(> .courseNav--item.active){
-    background: rgba(182, 143, 255, 0.4); // Setting background rather than opacity to prevent text from being transparent
+    font-weight: 700;
 }

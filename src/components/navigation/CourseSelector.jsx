@@ -5,45 +5,43 @@ import { Link } from 'react-router-dom';
 import AddCourse from '../../assets/AddCourse';
 import BaruvasLogo from '../../assets/BaruvasLogo';
 import CourseNav from './CourseNav';
-import {BsPersonCircle} from 'react-icons/bs';
 
 
 function CourseSelector(props) {
 
     const {activeCourse, setActiveCourse, courseInfo, currChatName} = props;
     
-    const Course = ({ courseName, courseImg, courseColor }) => {
-
-        const [isCurrent, setCurrent] = useState(false);
+    const Course = ({ courseName, isActive }) => {
 
         return (
-            <div className='course'>
+            <div className={isActive ? 'courseSelector--course active' : 'courseSelector--course'}>
                 {courseName}
             </div>
         )
     }
+    console.log(activeCourse)
     
     return (
         <>
         <div className='courseSelector'>
             <BaruvasLogo setUser={props.setUser} setCurrChatName={props.setCurrChatName} user={props.user}/>
             <div className='courseSelector--courses'>
-                <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')}>
+                <Link to='/ui/syllabus' onClick={() => setActiveCourse('ui')} style={{ textDecoration: 'none' }}>
                     <Course 
-                        className={activeCourse === 'ui' ? 'courseSelector--course active' : 'courseSelector--course'}
                         courseId='ui' 
                         courseName={courseInfo['ui'].courseName}
                         courseProfessor={courseInfo['ui'].courseProfessor}
                         courseImg={`../../assets/${courseInfo['ui'].courseImg}`}
+                        isActive={activeCourse === 'ui'}
                     />
                 </Link>
-                <Link to='/compg/syllabus' onClick={() => setActiveCourse('compg')}>
+                <Link to='/compg/syllabus' onClick={() => setActiveCourse('compg')} style={{ textDecoration: 'none' }}>
                     <Course 
-                        className={activeCourse === 'compg' ? 'courseSelector--course active' : 'courseSelector--course'}
                         courseId='compg' 
                         courseName={courseInfo['compg'].courseName}
                         courseProfessor={courseInfo['compg'].courseProfessor}
                         courseImg={`../../assets/${courseInfo['compg'].courseImg}`} 
+                        isActive={activeCourse === 'compg'}
                     />
                 </Link>
                 <AddCourse/>
