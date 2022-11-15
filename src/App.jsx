@@ -5,7 +5,7 @@ import CourseSelector from "./components/navigation/CourseSelector";
 import ChatWindow from "./components/chat/ChatWindow";
 
 function App() {
-  const [activeCourse, setActiveCourse] = useState("compg");
+  const [activeCourse, setActiveCourse] = useState("ui");
   const [courseInfo, setCourseInfo] = useState({
     compg: {
       courseName: "Computer Graphics",
@@ -109,7 +109,7 @@ function App() {
       "alex": {"data": [{"content":"BARU WAKE UP!!", "author": "alex", 'time': Date.now()}, {"content":"LEAVE ME ALONEEEEE", "author": "baru", 'time': Date.now()}]},
     },
     "liz": {
-      "baru": {"data": [{"content":"baruuuuuuu", "author": "liz", 'time': Date.now()}, {"content":"never text me", "author": "baru"}, {"content":"hehehe", "author": "liz", 'time': Date.now()}]},
+      "baru": {"data": [{"content":"baruuuuuuu", "author": "liz", 'time': Date.now()}, {"content":"never text me", "author": "baru", 'time': Date.now()}, {"content":"hehehe", "author": "liz", 'time': Date.now()}]},
       "daniel": {"data": [{"content":"omw to the library now", "author": "liz", 'time': Date.now()}, {"content":"Are you at Langsam?", "author": "daniel", 'time': Date.now()}, {"content":"Yeah just got there", "author": "liz", 'time': Date.now()}]},
       "alex": {"data": [{"content":"hey lizzo", "author": "alex", 'time': Date.now()}, {"content":"whats goin on chungus", "author": "liz", 'time': Date.now()}, {"content":"are you slaying per usual", "author": "liz", 'time': Date.now()}, {"content":"you know it", "author": "alex", 'time': Date.now()}]},
     },
