@@ -176,7 +176,7 @@ https://streamable.com/ndrtti
 ![Digital Design 3](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/designs/Design%203.png)
 
 ## Division of Work
-Alex: Grades Page, chat select styling
-Baru: All chat functionality, timestamps, state management, minor chat styling, user switching, demo video
-Daniel: Basic layout, Modules Page, Syllabus Page, Zoom Page, Announcements Page, styling and documentation, bug fixes
-Liz: Design mockups, add course functionality, course selector, Assignments page and detail view, site routing, styling
+- Alex: Grades Page, chat select styling
+- Baru: All chat functionality, timestamps, state management, minor chat styling, user switching, demo video
+- Daniel: Basic layout, Modules Page, Syllabus Page, Zoom Page, Announcements Page, styling and documentation, bug fixes
+- Liz: Design mockups, add course functionality, course selector, Assignments page and detail view, site routing, styling
