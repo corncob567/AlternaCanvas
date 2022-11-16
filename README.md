@@ -105,9 +105,50 @@ The following [survey results](https://docs.google.com/forms/d/1U4Fa1motRzKF2liU
 
 ## Interface Description
 
+Baranvas, is a Canvas alternative that facilitates better communication between users, their peers, and members of faculty. With this in mind, we divide user's screens into 4 primary columns:  
+
+1. Course Selection - this column contains three distinct functions: switching between users (for the purposes of demonstration, this can be done by clicking the Baranvas logo and selecting an account name), selecting what course you want to navigate and view chats for, and adding additional courses through a modal that pops up when the plus button is selected. Typing in a valid courseid (only 'seniordesign' works for our initial implementation), will add this course to the selection column.
+
+![Course Select Panel](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/CourseSelector.png)
+![Change User Dropdown](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ChangeUserDropdown.png)
+![Add Course Popup](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AddCoursePopup.png)
+
+2. Course Navigation - this column allows users to navigate to various pages and chats specific to the course they have selected. It also contains basic information about the course at the top.
+
+![Course Navigation Panel](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/CourseNavBar.png)
+
+3. Page View - the meat and potatoes of our website lies in the page view. It displays whatever page was selected from the course navigation bar. We have 5 pages, outlined below:
+
+- Syllabus Page - Simply displays the dyllabus for the course.
+
+![Syllabus Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/SyllabusPage.png)
+
+- Assignments Page - Allows users to access a list of each assignment for that course, with assignment names and due dates shown. Selecting an assignment will navigate the user to the assignment's submission/detail page. On this page, users can read the assignment info and submit either a file or text entry for the assignment.
+
+![Assignment Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentsPage.png)
+![Assignment Detail Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentDetail.png)
+![Assignment Submission](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentSubmission.png)
+
+- Grade Page - Allows users to view their current grades for the course, including their per-assignment grade breakdown and a table showing the weighting scheme the professor uses.
+
+![Grade Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/GradesPage.png)
+
+- Modules Page - Allows users to easily access course materials in one space. It includes links to assignments and downloads for presentation materials grouped into professor-defined dropdowns/modules.
+
+![Module Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ModulesPage.png)
+
+- Announcements Page - Displays a listing of announcements made by the course professor. The recent announcements are highlighted to draw attention to them.
+
+![Announcement Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AnnouncementsPage.png)
+
+4. Chat Panel - To facilitate an ongoing conversation between users, the rightmost panel is reserved for live chats specified by the chat channel chosen in the course navigation bar under the 'Chat' section. The user can submit text which will display alongside replies from other users in those chats. Going to an assignment and clicking on the dialog bubble will open the assignment's specific chat. This way, relevant info for an assignment in confined to that assignment's chat.
+
+![Chat Panel](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ChatPanel.png)
+![Chat Select Section](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ChatSelectPanel.png)
 
 ## Demo Video
 
+https://streamable.com/uv8z0a
 
 ## Sketches
 
