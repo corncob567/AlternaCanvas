@@ -167,7 +167,7 @@ https://streamable.com/ndrtti
 
 ### Storyboard
 
-![Storyboard](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/designs/storyboard.jpg)
+![Storyboard](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/designs/image.png)
 
 ### Prototype Interface Designs
 
