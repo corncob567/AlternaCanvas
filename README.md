@@ -141,6 +141,11 @@ Baranvas, is a Canvas alternative that facilitates better communication between 
 
 ![Announcement Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AnnouncementsPage.png)
 
+- Zoom Page - Displays a listing of Zoom meetings scheduled for the course (if any). This is intended to replicate what Zoom integration would look like.
+
+![Zoom Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ZoomPage.png)
+
+
 4. Chat Panel - To facilitate an ongoing conversation between users, the rightmost panel is reserved for live chats specified by the chat channel chosen in the course navigation bar under the 'Chat' section. The user can submit text which will display alongside replies from other users in those chats. Going to an assignment and clicking on the dialog bubble will open the assignment's specific chat. This way, relevant info for an assignment in confined to that assignment's chat.
 
 ![Chat Panel](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/ChatPanel.png)
