@@ -125,7 +125,7 @@ Baranvas, is a Canvas alternative that facilitates better communication between 
 
 - Assignments Page - Allows users to access a list of each assignment for that course, with assignment names and due dates shown. Selecting an assignment will navigate the user to the assignment's submission/detail page. On this page, users can read the assignment info and submit either a file or text entry for the assignment.
 
-![Assignment Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentsPage.png)
+![Assignment Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/image.png)
 ![Assignment Detail Page](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentDetail.png)
 ![Assignment Submission](https://github.com/corncob567/AlternaCanvas/blob/main/src/assets/screenshots/AssignmentSubmission.png)
 
