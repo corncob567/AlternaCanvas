@@ -153,7 +153,7 @@ Baranvas, is a Canvas alternative that facilitates better communication between 
 
 ## Demo Video
 
-https://streamable.com/uv8z0a
+https://streamable.com/ndrtti
 
 ## Sketches
 
